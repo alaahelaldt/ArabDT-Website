@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>ArabDT</title>
+	<title>ArabDT - Service Details</title>
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<meta name="author" content="templatemo">
@@ -11,81 +11,132 @@
 	<!-- Google Fonts -->
 	<link href="http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700itali" rel="stylesheet">
 	<link href="http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,500,200,100,600" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 	<!-- Stylesheets -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/darkly/bootstrap.min.css">
 	<link rel="stylesheet" href="bootstrap/bootstrap.css">
 	<link rel="stylesheet" href="css/red-scheme.css">
-
-	<!-- JavaScripts -->
-	<script src="js/jquery-1.10.2.min.js"></script>
-	<script src="js/jquery-migrate-1.2.1.min.js"></script>
+	<link rel="stylesheet" href="css/SliderStyle.css">
 
 	<link rel="shortcut icon" href="images/ArabIcon.ico" type="image/x-icon" />
 
 </head>
 <body class="ServiceDetailsBody">
-	<div class="responsive_menu">
+	<div class="responsive_menu" id="MenuResponsive">
 		<ul class="main_menu">
-			<li><a href="..\ArabDT\HomePage.html">Home</a></li>
-			<li><a href="..\ArabDT\AboutUs.html">About Us</a></li>
-			<li class="active">
-				<a href="..\ArabDT\OurServices.html">Our Services</a>
-				<ul>
-					<li class="active"><a class="ServiceDetailsFontHeader" href="..\ArabDT\ServiceDetails.html">Lorem ipsum</a></li>
-					<li><a class="ServiceDetailsFontHeader" href="..\ArabDT\ServiceDetails.html">Lorem ipsum</a></li>
-					<li><a class="ServiceDetailsFontHeader" href="..\ArabDT\ServiceDetails.html">Lorem ipsum</a></li>
-				</ul>
+			<li class="IndexPage"><a class="IndexLink" href="index.html">Home</a></li>
+			<li class="IndexPage"><a class="IndexLink" href="AboutUs.html">About Us</a></li>
+			<li class="active IndexPage">
+				<div class="dropdown">
+					<a class="IndexLink" href="OurServices.html">Our Services</a>
+					<i class="IndexLink dropbtn fa fa-chevron-down" onclick="myFunction();"></i>
+
+					<div id="myServiceDropdown" class="dropdown-content">
+						<a class="IndexLinkDropDown" href="ServiceDetails.html">Services</a>
+						<a class="IndexLinkDropDown" href="ServiceDetails.html">Services</a>
+						<a class="IndexLinkDropDown" href="ServiceDetails.html">Services</a>
+					</div>
+
+				</div>
+				<script>
+					/* When the user clicks on the button,
+					toggle between hiding and showing the dropdown content */
+					function myFunction() {
+						document.getElementById("myServiceDropdown").classList.toggle("show");
+					}
+
+					// Close the dropdown if the user clicks outside of it
+					window.onclick = function (event) {
+						if (!event.target.matches('#ServiceDown')) {
+							var dropdowns = document.getElementsByClassName("dropdown-content");
+							var i;
+							for (i = 0; i < dropdowns.length; i++) {
+								var openDropdown = dropdowns[i];
+								if (openDropdown.classList.contains('show')) {
+									openDropdown.classList.remove('show');
+								}
+							}
+						}
+					}
+				</script>
 			</li>
-			<li><a href="..\ArabDT\Careers.html">Careers</a></li>
-			<li><a href="..\ArabDT\ContactUs.html">Contact Us</a></li>
-			<li>
-				<a href="..\ArabDT\EN.html">EN</a>
-				<ul>
-					<li><a href="blog.html"> Arabic </a></li>
-					<li><a href="blog-single.html"> English </a></li>
-				</ul>
+			<li class="IndexPage"><a class="IndexLink" href="Career.html">Careers</a></li>
+			<li class="IndexPage"><a class="IndexLink" href="ContactUs.html">Contact Us</a></li>
+			<li class="IndexPage">
+				<div class="dropdown">
+					<a class="IndexLink" href="index.html">EN</a>
+					<i class="IndexLink dropbtn fa fa-chevron-down" onclick="myEnFunction();"></i>
+
+					<div id="myEnDropdown" class="dropdown-content">
+						<a class="ServiceBorder IndexLinkDropDown" href="index.html">English</a>
+						<a class="ServiceBorder IndexLinkDropDown" href="index.html">Arabic</a>
+					</div>
+
+				</div>
+
+				<script>
+					function myEnFunction() {
+						document.getElementById("myEnDropdown").classList.toggle("show");
+					}
+
+					window.onclick = function (event) {
+						if (!event.target.matches('#EnDown')) {
+							var Endropdowns = document.getElementById("myEnDropdown");
+							var i;
+							for (i = 0; i < Endropdowns.length; i++) {
+								var OpenDropdown = Endropdowns[i];
+								if (OpenDropdown.classList.contains('show')) {
+									OpenDropdown.classList.remove('show');
+								}
+							}
+						}
+					}
+				</script>
 			</li>
 		</ul>
 	</div>
 
 	<header class="site-header clearfix" name="top">
-		<div class="container">
-			<div class="row">
+		<div class="container" id="NavBarContainer">
+			<div class="row" id="NavBarRow">
 				<div class="col-md-12">
 					<div class="pull-left logo">
-						<a href="..\ArabDT\HomePage.html">
-							<img src="images/Logo.png" alt="ArabDT by templatemo">
+						<a href="index.html">
+							<img class="img-fluid" id="WebsiteLogo" src="images/Logo.png" alt="ArabDT by templatemo">
 						</a>
 					</div>
 
 					<div class="main-navigation pull-right">
 						<nav class="main-nav visible-md visible-lg">
-							<ul class="sf-menu" id="NavBarHeader">
-								<li><a href="..\ArabDT\HomePage.html">Home</a></li>
-								<li class="active"><a href="..\ArabDT\AboutUs.html">About Us</a></li>
-								<li>
-									<a href="..\ArabDT\OurServices.html">Our Services</a>
+							<ul class="sf-menu" id="NavBarOurServicesHeader">
+								<li id="AboutUsNavBar"><a id="DivOfAllHome" href="index.html">Home</a></li>
+								<li id="AboutUsNavBar"><a id="DivOfAllAboutUs" href="AboutUs.html">About Us</a></li>
+								<li id="AboutUsNavBar" class="active">
+									<a href="OurServices.html">Our Services</a>
+									<div id="mainDivOurServices">
+									</div>
 									<ul>
-										<li><a href="..\ArabDT\OurServices.html">Services</a></li>
-										<li><a href="..\ArabDT\OurServices.html">Services</a></li>
-										<li><a href="..\ArabDT\OurServices.html">Services</a></li>
+										<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="ServiceDetails.html">Lorem ipsum</a></li>
+										<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="ServiceDetails.html">Lorem ipsum</a></li>
+										<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="ServiceDetails.html">Lorem ipsum</a></li>
+										<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="ServiceDetails.html">Lorem ipsum</a></li>
 									</ul>
 								</li>
-								<li><a href="..\ArabDT\Careers.html">Careers</a></li>
-								<li><a href="..\ArabDT\ContactUs.html">Contact Us</a></li>
-								<li>
-									<a href="..\ArabDT\EN.html">EN</a>
-									<ul>
-										<li><a href="blog.html"> Arabic </a></li>
-										<li><a href="blog-single.html"> English </a></li>
+								<li id="AboutUsNavBar"><a id="DivOfAllCareer" href="Career.html">Careers</a></li>
+								<li id="AboutUsNavBar"><a id="DivOfAllContactUs" href="ContactUs.html">Contact Us</a></li>
+								<li id="AboutUsNavBar">
+									<a id="DivOfAllLanguage" href="index.html">EN</a>
+									<ul id="SectionOfLanguage">
+										<li id="LanguageSection" class="ServiceDetailsHeader"><a href="index.html"> Arabic </a></li>
+										<li id="LanguageSection" class="ServiceDetailsHeader"><a href="index.html"> English </a></li>
 									</ul>
 								</li>
 							</ul>
-
 							<script>
 								$(document).ready(function () {
 									$('sf-menu li a').click(function () {
-										$('li a').removeClass("active");
+										$('li a').removeClass("active ");
 										$(this).addClass("active");
 									});
 								});
@@ -94,7 +145,7 @@
 
 						<div class="responsive-navigation visible-sm visible-xs">
 							<a href="#nogo" class="menu-toggle-btn">
-								<i class="fa fa-bars"></i>
+								<i class="fa fa-bars HomeMinMenu"></i>
 							</a>
 						</div>
 
@@ -107,68 +158,167 @@
 		</div>
 	</header> <!-- Header -->
 
-	<header id="header" class="header">
-		<div class="header-content">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 text-center">
-						<div class="text-container">
-							<img class="ServiceDetailsPicture" src="images/Mobile.png" alt="alternative" />
-						</div>
-					</div>
-				</div>
-			</div>
+	<div class="container">
+		<div id="ServiceDetailsSectionPicture">
+			<img class="img-fluid" id="ServiceDetailsPicture" src="images/Mobile.png" alt="alternative" />
 		</div>
-	</header> <!-- Arab Picture -->
 
+		<div>
+			<h1 class="ContainerHeaderOfServiceDetails">
+				<b class="ServiceDetailsHeaderContent">
+					SOFTWARE SOLUATIONS
+				</b>
+			</h1>
 
-	<header id="ServiceDetailsContent" class="header">
-		<div class="container">
-			<div class="col-lg-12 text-center">
-				<!--<div class="col-lg-2">
+			<p class="FirstServiceDetailsContentBody">
+				Our services begin from analysis, moving through designing, development, testing and implementation to maintenance. Our applications come in all sizes, be it a one-table database, or a massive client-server application. The creation of complete database applications is yet another field that we specialize in, we Offer:
+				<br />
+				o	Interactive Application Development
+				<br />
+				o	Custom Application Development/ Maintenance
+				<br />
+				o	E-learning solutions
+				<br />
+				o	Mobile Application
+				<br />
+				o	MIS and ERP Solutions & Support
 
-				</div>-->
+			</p>
 
-				<div class="col-lg-12">
-					<div class="text-container">
-						<h1> <b class="ServiceDetailsHeaderContent">SERVICE</b> </h1>
-
-						<p class="ServiceDetailsContentBody">
-							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-							tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-							nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-							Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel
-							illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui
-							blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-							Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod
-							tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-							nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-							tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-							nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-							Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel
-							illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui
-							blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-							Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod
-						</p>
-					</div>
-				</div>
-
-			</div>
+			<p class="SecondServiceDetailsContentBody">
+				Our services begin from analysis, moving through designing, development, testing and implementation to maintenance. Our applications come in all sizes, be it a one-table database, or a massive client-server application. The creation of complete database applications is yet another field that we specialize in, we Offer:
+				<br />
+				o	Interactive Application Development
+				<br />
+				o	Custom Application Development/ Maintenance
+				<br />
+				o	E-learning solutions
+				<br />
+				o	Mobile Application
+				<br />
+				o	MIS and ERP Solutions & Support
+			</p>
 		</div>
-	</header> <!-- About Us Content -->
 
-	<div class="footer" id="MainSectionOfFooter">
-		<div class="container">
-			<div class="col-lg-12 col-md-6 col-sm-4">
-				<div class="col-lg-2 col-md-3 col-sm-2" id="PictureOfAboutUs">
-					<img class="card-image" id="StyleOfAboutUsPicture" src="images/Logo.png" alt="alternative">
+		<div>
+			<h1 class="ContainerHeaderOfServiceDetails">
+				<b class="ServiceDetailsHeaderContent">
+					WEB SOLUTIONS
+				</b>
+			</h1>
+
+			<p class="FirstServiceDetailsContentBody">
+				We provide web solutions & services to help customer reach to a wider customer base, you need web consulting to get more return on your investment in your web site. We can help you get the most effective solution through:
+				<br />
+				o	Website Development
+				<br />
+				o	Intranet Development
+				<br />
+				o	E-commerce
+			</p>
+
+			<p class="SecondServiceDetailsContentBody">
+				We provide web solutions & services to help customer reach to a wider customer base, you need web consulting to get more return on your investment in your web site. We can help you get the most effective solution through:
+				<br />
+				o	Website Development
+				<br />
+				o	Intranet Development
+				<br />
+				o	E-commerce
+			</p>
+		</div>
+
+		<div>
+			<h1 class="ContainerHeaderOfServiceDetails">
+				<b class="ServiceDetailsHeaderContent">
+					QUALITY ASSURANCE & TESTING
+				</b>
+			</h1>
+
+			<p class="FirstServiceDetailsContentBody">
+				ArabDT believes in quality to the max. And quality is one of the most success factors with our customers and partners, we offer:
+				<br />
+				o	Functional Testing services
+				<br />
+				o	Test Automation consultation and implementation
+				<br />
+				o	Performance Testing services
+				<br />
+				o	Security Testing/  Vulnerability scanning
+			</p>
+
+			<p class="SecondServiceDetailsContentBody">
+				ArabDT believes in quality to the max. And quality is one of the most success factors with our customers and partners, we offer:
+				<br />
+				o	Functional Testing services
+				<br />
+				o	Test Automation consultation and implementation
+				<br />
+				o	Performance Testing services
+				<br />
+				o	Security Testing/  Vulnerability scanning
+			</p>
+		</div>
+
+		<div>
+			<h1 class="ContainerHeaderOfServiceDetails">
+				<b class="ServiceDetailsHeaderContent">
+					TURNKEY SOLUTIONS
+				</b>
+			</h1>
+
+			<p class="FirstServiceDetailsContentBody">
+				ArabDT takes up projects under this service for a fixed price and takes all responsibility of execution and 
+				project management. These solutions are ideally suited for projects that are fairly well specified and require 
+				well-defined interfacing with the client. Our mature software development processes, combined with excellent 
+				infrastructure have significantly increased the “on-time and on budget” delivery of software in the offshore mode.
+
+			</p>
+
+			<p class="SecondServiceDetailsContentBody">
+				ArabDT takes up projects under this service for a fixed price and takes all responsibility of execution and
+				project management. These solutions are ideally suited for projects that are fairly well specified and require
+				well-defined interfacing with the client. Our mature software development processes, combined with excellent
+				infrastructure have significantly increased the “on-time and on budget” delivery of software in the offshore mode.
+
+			</p>
+		</div>
+
+		<div>
+			<h1 class="ContainerHeaderOfServiceDetails">
+				<b class="ServiceDetailsHeaderContent">
+					OFFSHORE DEVELOPMENT
+				</b>
+			</h1>
+
+			<p class="FirstServiceDetailsContentBody">
+				To get the best IT solutions, you don't need to be geographically near us. That's because we offer quality 
+				offshore development center. Our offshore software solutions in application development and web site development
+				guarantee cost savings without the need to compromise on either speed or quality. Our 100% customer retention 
+				rates speaks for our quality, swift response and cost effectiveness. These all feathers to our work make us a 
+				preferred offshore development house
+			</p>
+
+			<p class="SecondServiceDetailsContentBody">
+				To get the best IT solutions, you don't need to be geographically near us. That's because we offer quality
+				offshore development center. Our offshore software solutions in application development and web site development
+				guarantee cost savings without the need to compromise on either speed or quality. Our 100% customer retention
+				rates speaks for our quality, swift response and cost effectiveness. These all feathers to our work make us a
+				preferred offshore development house
+			</p>
+		</div>
+
+		<div class="col-lg-12 col-md-12 col-sm-12">
+
+			<div class="row" id="FirstFooter">
+				<div class="col-lg-3 col-md-3 col-xs-3">
+					<img class="img-fluid" id="LogoPicture" src="images/Logo.png" alt="alternative">
 				</div>
 
-				<div class="col-lg-3 col-md-3 col-sm-2" id="AboutUsContainerFooter">
-					<h3 class="AboutUsHeader"><b>About Us</b></h3>
-					
-					<p class="AboutUsFooterContent">
+				<div class="col-lg-3 col-md-3 col-xs-3" id="SectionOfAboutUsAndSocialMedia">
+					<h3 class="FooterAboutUsHeader"><b>About Us</b></h3>
+
+					<p class="FooterContentAboutUs">
 						Lorem ipsum dolor sit amet, consectetuer
 						adipiscing elit, sed diam nonummy nibh
 						euismod tincidunt ut laoreet dolore magna
@@ -176,28 +326,24 @@
 						veniam, quis nostrud exerci tation ullam
 					</p>
 
-					<a class="st-btn" data-network="googleplus" id="FooterMediaLink">
-						<img class="MediaImageSize" alt="googleplus sharing button" src="https://platform-cdn.sharethis.com/img/googleplus.svg">
+					<a class="st-btn" data-network="linkedin" href="https://www.linkedin.com/" id="FooterSocialMediaLink">
+						<img class="FooterSocialMediaImageSize" alt="linkedin sharing button" src="https://platform-cdn.sharethis.com/img/linkedin.svg">
 					</a>
 
-					<a class="st-btn st-first" data-network="facebook" id="FooterMediaLink">
-						<img class="MediaImageSize" alt="facebook sharing button" src="https://platform-cdn.sharethis.com/img/facebook.svg">
+					<a class="st-btn st-first" data-network="facebook" href="https://www.facebook.com/" id="FooterSocialMediaLink">
+						<img class="FooterSocialMediaImageSize" alt="facebook sharing button" src="https://platform-cdn.sharethis.com/img/facebook.svg">
 					</a>
 
-					<a class="st-btn" data-network="linkedin" id="FooterMediaLink">
-						<img class="MediaImageSize" alt="linkedin sharing button" src="https://platform-cdn.sharethis.com/img/linkedin.svg">
+					<a class="st-btn" data-network="twitter" href="https://www.twitter.com/" id="FooterSocialMediaLink">
+						<img class="FooterSocialMediaImageSize" alt="twitter sharing button" src="https://platform-cdn.sharethis.com/img/twitter.svg">
 					</a>
 
-					<a class="st-btn" data-network="instagram" id="FooterMediaLink">
-						<img class="MediaImageSize" alt="twitter sharing button" src="https://platform-cdn.sharethis.com/img/twitter.svg">
-					</a>
-
-					<a class="st-btn" data-network="instagram" id="FooterMediaLink">
-						<img class="MediaImageSize" alt="instagram sharing button" src="https://platform-cdn.sharethis.com/img/instagram.svg">
+					<a class="st-btn" data-network="instagram" href="https://www.instagram.com/" id="FooterSocialMediaLink">
+						<img class="FooterSocialMediaImageSize" alt="instagram sharing button" src="https://platform-cdn.sharethis.com/img/instagram.svg">
 					</a>
 				</div>
 
-				<div class="col-lg-3 col-md-3 col-sm-2" id="OurServicesContainerFooter">
+				<div class="col-lg-3 col-md-3 col-xs-3">
 					<h3 class="AboutUsHeader"> <b> Our Services </b> </h3>
 					<ul class="OurServicesContentContainer">
 						<li class="OurServiceFooterContent">Lorem ipsum Lorem ipsum</li>
@@ -207,7 +353,7 @@
 					</ul>
 				</div>
 
-				<div class="col-lg-3 col-md-2 col-sm-1" id="ContactUsContainerFooter">
+				<div class="col-lg-3 col-md-3 col-xs-3">
 					<h3 class="AboutUsHeader"> <b> Contact Us </b> </h3>
 					<ul class="Phone">
 						<li class="FooterContent">Mobile:</li>
@@ -224,119 +370,82 @@
 					</ul>
 				</div>
 
-				<div class="col-lg-1 col-md-1 col-sm-1" id="UPSection">
-					<img class="UPImageSize" alt="googleplus sharing button" src="images/UP.png">
+				<p class="copyright-text"> ArabDT Copyrights © 2020 </p>
+			</div>
+
+			<div class="row" id="SecondFooter">
+				<div class="col-md-6 col-xs-12">
+					<img class="img-fluid" id="LogoPicture" src="images/Logo.png" alt="alternative">
+				</div>
+
+				<div class="col-md-6 col-xs-12" id="SectionContactUs">
+					<h3 class="FooterHeaderAboutUs"> <b> Contact Us </b> </h3>
+					<ul class="FooterPhone">
+						<li class="FooterContentBody">Mobile:</li>
+						<li class="FooterContentOneSection">+20 011234567890</li>
+
+						<li class="FooterContentBody">Telephone:</li>
+						<li class="FooterContentTwoSection">+20 23456789</li>
+
+						<li class="FooterContentBody">Email:</li>
+						<li class="FooterContentThreeSection">Lorem ipsum@gmail.com</li>
+
+						<li class="FooterContentBody">Address:</li>
+						<li class="FooterContentFourSection">Lorem ipsum Lorem ipsum</li>
+					</ul>
+				</div>
+
+				<div class="col-md-6 col-xs-12" id="MediaSocial">
+					<a class="st-btn" data-network="linkedin" href="https://www.linkedin.com/" id="FooterSocialMediaLink">
+						<img class="FooterSocialMediaImageSize" alt="linkedin sharing button" src="https://platform-cdn.sharethis.com/img/linkedin.svg">
+					</a>
+
+					<a class="st-btn st-first" data-network="facebook" href="https://www.facebook.com/" id="FooterSocialMediaLink">
+						<img class="FooterSocialMediaImageSize" alt="facebook sharing button" src="https://platform-cdn.sharethis.com/img/facebook.svg">
+					</a>
+
+					<a class="st-btn" data-network="twitter" href="https://www.twitter.com/" id="FooterSocialMediaLink">
+						<img class="FooterSocialMediaImageSize" alt="twitter sharing button" src="https://platform-cdn.sharethis.com/img/twitter.svg">
+					</a>
+
+					<a class="st-btn" data-network="instagram" href="https://www.instagram.com/" id="FooterSocialMediaLink">
+						<img class="FooterSocialMediaImageSize" alt="instagram sharing button" src="https://platform-cdn.sharethis.com/img/instagram.svg">
+					</a>
+				</div>
+
+				<p class="copyright_text" id="CopyRight"> ArabDT Copyrights © 2020 </p>
+			</div>
+
+			<div class="container" id="ButtonFooterUp">
+				<div class="UpFooter" id="UPSection">
+					<a href="#top" id="button">
+					</a>
+
+					<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+					<script>
+						var btn = $('#button');
+
+						$(window).scroll(function () {
+							if ($(window).scrollTop() > 300) {
+								btn.addClass('show');
+							} else {
+								btn.removeClass('show');
+							}
+						});
+
+						btn.on('click', function (e) {
+							e.preventDefault();
+							$('html, body').animate({ scrollTop: 0 }, '300');
+						});
+					</script>
 				</div>
 			</div>
-
-			<div class="row">
-
-				<!-- <div class="col-lg-2 col-md-1" id="PictureOfAboutUs">
-					<img class="card-image" id="StyleOfAboutUsPicture" src="images/Logo.png" alt="alternative">
-					<div class="col-lg-2" id="PictureOfAboutUs">
-						<img class="card-image" id="StyleOfAboutUsPicture" src="images/Logo.png" alt="alternative">
-					</div>
-					<div class="footer-col last">
-						<div class="row">
-							<div class="col-lg-2" id="PictureOfAboutUs">
-								<img class="card-image" id="StyleOfAboutUsPicture" src="images/Logo.png" alt="alternative">
-							</div>
-						</div>
-					</div>
-				</div> -->
-				<!-- <div class="col-lg-3 col-md-1">
-					<div class="row">
-						<div class="col-lg-12">
-							<h3 class="AboutUsHeader"><b>About Us</b></h3>
-						</div>
-
-						<div class="col-lg-12" id="ContentFooterMarginBottom">
-							<ul class="ContentOfAboutUsSection">
-								<li class="FooterContent">
-									Lorem ipsum dolor sit amet, consectetuer
-									adipiscing elit, sed diam nonummy nibh
-									euismod tincidunt ut laoreet dolore magna
-									aliquam erat volutpat. Ut wisi enim ad minim
-									veniam, quis nostrud exerci tation ullam
-								</li>
-							</ul>
-						</div>
-
-						<div class="col-lg-12">
-							<div class="mb-5 flex-center">
-								<a class="st-btn" data-network="googleplus" id="FooterMediaLink">
-									<img class="MediaImageSize" alt="googleplus sharing button" src="https://platform-cdn.sharethis.com/img/googleplus.svg">
-								</a>
-
-								<a class="st-btn st-first" data-network="facebook" id="FooterMediaLink">
-									<img class="MediaImageSize" alt="facebook sharing button" src="https://platform-cdn.sharethis.com/img/facebook.svg">
-								</a>
-
-								<a class="st-btn" data-network="linkedin" id="FooterMediaLink">
-									<img class="MediaImageSize" alt="linkedin sharing button" src="https://platform-cdn.sharethis.com/img/linkedin.svg">
-								</a>
-
-								<a class="st-btn" data-network="instagram" id="FooterMediaLink">
-									<img class="MediaImageSize" alt="twitter sharing button" src="https://platform-cdn.sharethis.com/img/twitter.svg">
-								</a>
-
-								<a class="st-btn" data-network="instagram" id="FooterMediaLink">
-									<img class="MediaImageSize" alt="instagram sharing button" src="https://platform-cdn.sharethis.com/img/instagram.svg">
-								</a>
-							</div>
-						</div>
-					</div>
-				</div> -->
-				<!-- <div class="col-lg-3">
-					<div class="footer-col last">
-						<div class="row">
-							<div class="col-lg-10">
-								<h3 class="AboutUsHeader">Our Services</h3>
-								<ul class="Phone">
-									<li class="FooterContent">Lorem ipsum Lorem ipsum</li>
-									<li class="FooterContent">Lorem ipsum Lorem ipsum</li>
-									<li class="FooterContent">Lorem ipsum Lorem ipsum</li>
-									<li class="FooterContent">Lorem ipsum Lorem ipsum</li>
-								</ul>
-							</div>
-
-						</div>
-					</div>
-				</div> -->
-				<!-- <div class="col-lg-3">
-					<div class="footer-col last">
-						<div class="row">
-							<div class="col-lg-10">
-								<h3 class="AboutUsHeader">Contact Us</h3>
-								<ul class="Phone">
-									<li class="FooterContent">Mobile:</li>
-									<li class="FooterContent">+20 011234567890</li>
-
-									<li class="FooterContent">Telephone:</li>
-									<li class="FooterContent">+20 23456789</li>
-
-									<li class="FooterContent">Email:</li>
-									<li class="FooterContent">Lorem ipsum@gmail.com</li>
-
-									<li class="FooterContent">Address:</li>
-									<li class="FooterContent">Lorem ipsum Lorem ipsum</li>
-								</ul>
-							</div>
-
-						</div>
-					</div>
-				</div> -->
-				<!-- <div class="col-lg-1" id="UPSection">
-					<a class="st-btn" data-network="googleplus" href="#top">
-						<img class="UPImageSize" alt="googleplus sharing button" src="images/UP.png">
-					</a>
-				</div> -->
-			</div>
-
-			<p class="copyright-text">ArabDT Copyright 2020 </p>
 		</div>
-	</div> <!-- Footer -->
+	</div>
 	<!-- Scripts -->
+
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery-migrate-1.2.1.min.js"></script>
 	<script src="js/min/plugins.min.js"></script>
 	<script src="js/min/medigo-custom.min.js"></script>
 </body>

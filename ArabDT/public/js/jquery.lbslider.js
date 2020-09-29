@@ -3,7 +3,7 @@
         var options = $.extend({
             leftBtn: '.leftBtn',
             rightBtn: '.rightBtn',
-            visible: 3,
+            visible: 4,
             autoPlay: false,  // true or false
             autoPlayDelay: 10,  // delay in seconds
             autoPlayDirection: 'right-to-left'  //autoplay direction

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>ArabDT - Career</title>
+	<title>ArabDT - Offshore Development </title>
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<meta name="author" content="templatemo">
@@ -11,20 +11,23 @@
 	<!-- Google Fonts -->
 	<link href="http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700itali" rel="stylesheet">
 	<link href="http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,500,200,100,600" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 	<!-- Stylesheets -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/darkly/bootstrap.min.css">
 	<link rel="stylesheet" href="bootstrap/bootstrap.css">
 	<link rel="stylesheet" href="css/red-scheme.css">
+	<link rel="stylesheet" href="css/SliderStyle.css">
 
 	<link rel="shortcut icon" href="images/ArabIcon.ico" type="image/x-icon" />
 
 </head>
-<body class="CareerBody">
-	<div class="responsive_menu CareerMenuResponsive" id="MenuResponsive">
+<body class="ServiceDetailsBody">
+	<div class="responsive_menu" id="MenuResponsive">
 		<ul class="main_menu">
 			<li class="IndexPage"><a class="IndexLink" href="index.html">Home</a></li>
 			<li class="IndexPage"><a class="IndexLink" href="AboutUs.html">About Us</a></li>
-			<li class="IndexPage">
+			<li class="active IndexPage">
 				<div class="dropdown">
 					<a class="IndexLink" href="OurServices.html">Our Services</a>
 					<i class="IndexLink dropbtn fa fa-chevron-down" onclick="myFunction();"></i>
@@ -39,11 +42,14 @@
 					</div>
 
 				</div>
-				<!--<script>
+				<script>
+					/* When the user clicks on the button,
+					toggle between hiding and showing the dropdown content */
 					function myFunction() {
 						document.getElementById("myServiceDropdown").classList.toggle("show");
 					}
 
+					// Close the dropdown if the user clicks outside of it
 					window.onclick = function (event) {
 						if (!event.target.matches('#ServiceDown')) {
 							var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -56,9 +62,9 @@
 							}
 						}
 					}
-				</script>-->
+				</script>
 			</li>
-			<li class="active IndexPage"><a class="IndexLink" href="Career.html">Careers</a></li>
+			<li class="IndexPage"><a class="IndexLink" href="Career.html">Careers</a></li>
 			<li class="IndexPage"><a class="IndexLink" href="ContactUs.html">Contact Us</a></li>
 			<li class="IndexPage">
 				<div class="dropdown">
@@ -72,7 +78,7 @@
 
 				</div>
 
-				<!--<script>
+				<script>
 					function myEnFunction() {
 						document.getElementById("myEnDropdown").classList.toggle("show");
 					}
@@ -89,15 +95,15 @@
 							}
 						}
 					}
-				</script>-->
+				</script>
 			</li>
 		</ul>
 	</div>
 
 	<header class="site-header clearfix" name="top">
-		<div id="NavBarContainer">
+		<div class="container" id="NavBarContainer">
 			<div class="row" id="NavBarRow">
-				<div class="col-lg-12 col-md-12 col-sm-12">
+				<div class="col-md-12">
 					<div class="pull-left logo">
 						<a href="index.html">
 							<img class="img-fluid" id="WebsiteLogo" src="images/Logo.png" alt="ArabDT by templatemo">
@@ -106,11 +112,13 @@
 
 					<div class="main-navigation pull-right">
 						<nav class="main-nav visible-md visible-lg">
-							<ul class="sf-menu" id="NavBarCareerHeader">
+							<ul class="sf-menu" id="NavBarOurServicesHeader">
 								<li id="AboutUsNavBar"><a id="DivOfAllHome" href="index.html">Home</a></li>
 								<li id="AboutUsNavBar"><a id="DivOfAllAboutUs" href="AboutUs.html">About Us</a></li>
-								<li id="AboutUsNavBar">
-									<a id="DivOfAllOurServices" href="OurServices.html">Our Services</a>
+								<li id="AboutUsNavBar" class="active">
+									<a href="OurServices.html">Our Services</a>
+									<div id="mainDivOurServices">
+									</div>
 									<ul>
 										<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="Offshoredevelopment.html">Offshore development</a></li>
 										<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="Outsourcing.html">Out sourcing</a></li>
@@ -120,11 +128,7 @@
 										<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="WebSolutions.html">Web Solutions</a></li>
 									</ul>
 								</li>
-								<li id="AboutUsNavBar" class="active">
-									<a href="Career.html">Careers</a>
-									<div id="mainDivCareer">
-									</div>
-								</li>
+								<li id="AboutUsNavBar"><a id="DivOfAllCareer" href="Career.html">Careers</a></li>
 								<li id="AboutUsNavBar"><a id="DivOfAllContactUs" href="ContactUs.html">Contact Us</a></li>
 								<li id="AboutUsNavBar">
 									<a id="DivOfAllLanguage" href="index.html">EN</a>
@@ -133,22 +137,20 @@
 										<li id="LanguageSection" class="ServiceDetailsHeader"><a href="index.html"> English </a></li>
 									</ul>
 								</li>
-
 							</ul>
-
-							<!--<script>
+							<script>
 								$(document).ready(function () {
 									$('sf-menu li a').click(function () {
-										$('li a').removeClass("active");
+										$('li a').removeClass("active ");
 										$(this).addClass("active");
 									});
 								});
-							</script>-->
+							</script>
 						</nav>
 
 						<div class="responsive-navigation visible-sm visible-xs">
 							<a href="#nogo" class="menu-toggle-btn">
-								<i class="fa fa-bars"></i>
+								<i class="fa fa-bars HomeMinMenu"></i>
 							</a>
 						</div>
 
@@ -161,185 +163,36 @@
 		</div>
 	</header> <!-- Header -->
 
-	<div class="container p-3 my-3">
+	<div class="container">
+		<div id="ServiceDetailsSectionPicture">
+			<img class="img-fluid" id="ServiceDetailsPicture" src="images/Mobile.png" alt="alternative" />
+		</div>
+
+		<div>
+			<h1 class="ContainerHeaderOfServiceDetails">
+				<b class="ServiceDetailsHeaderContent">
+					OFFSHORE DEVELOPMENT
+				</b>
+			</h1>
+
+			<p class="FirstServiceDetailsContentBody">
+				To get the best IT solutions, you don't need to be geographically near us. That's because we offer quality 
+				offshore development center. Our offshore software solutions in application development and web site development 
+				guarantee cost savings without the need to compromise on either speed or quality. Our 100% customer retention rates
+				speaks for our quality, swift response and cost effectiveness. These all feathers to our work make us a preferred 
+				offshore development house.
+			</p>
+
+			<p class="SecondServiceDetailsContentBody">
+				To get the best IT solutions, you don't need to be geographically near us. That's because we offer quality
+				offshore development center. Our offshore software solutions in application development and web site development
+				guarantee cost savings without the need to compromise on either speed or quality. Our 100% customer retention rates
+				speaks for our quality, swift response and cost effectiveness. These all feathers to our work make us a preferred
+				offshore development house.
+			</p>
+		</div>
+
 		<div class="col-lg-12 col-md-12 col-sm-12">
-
-			<div class="container" id="CareerSectionPicture">
-				<img class="img-fluid" id="CareerImage" src="images/CareerAsset6.png" alt="alternative" />
-			</div>
-
-			<div class="FiveSectionCareerContainer">
-				<div class="JoinUs">
-					<h1> <b class="Career_FirstHeaderContent">JOIN US</b> </h1>
-				</div>
-
-				<!-- First Container -->
-				<div class="col-lg-12 col-md-12 col-xs-12">
-					<div class="col-lg-6 col-md-6 col-xs-12" id="Career_Container">
-						<div class="col-lg-3 col-md-3 col-xs-6" id="SectionCareerFrontImage">
-							<img class="CareerFrontImage" src="images/CareerAsset7.png" />
-						</div>
-						<div class="col-lg-3 col-md-3 col-xs-6" id="ContentCareerContainer">
-							<h2 class="HeaderFrontEnd">
-								<b class="SeniorBold"> FRONT-END </b>
-							</h2>
-							<h2 class="HeaderBoldFrontEndDeveloper"> <b class="FrontEndBold"> DEVELOPER </b> </h2>
-							<button class="Career_ButtonApplyNow" onclick="GoToDetails();">
-								<h2 class="ApplyNowFont"> <b class="Bold_Apply"> APPLY NOW </b> </h2>
-							</button>
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 col-xs-12" id="Career_Container">
-						<div class="col-lg-3 col-md-3 col-xs-6" id="SectionCareerFrontImage">
-							<img class="CareerFrontImage" src="images/CareerAsset7.png" />
-						</div>
-						<div class="col-lg-3 col-md-3 col-xs-6" id="Right_CareerContainer">
-							<h2 class="RightSeniorBoldSection">
-								<b class="RightSeniorBold"> SENIOR </b>
-							</h2>
-							<h2 class="Right_BoldFrontEndDeveloper">
-								<b class="RightFrontEndBold"> FRONT-END DEVELOPER </b>
-							</h2>
-							<button class="CareerButtonApplyNow" onclick="GoToDetails();">
-								<h2 class="ApplyNowFont"> <b class="Bold_Apply"> APPLY NOW </b> </h2>
-							</button>
-						</div>
-					</div>
-				</div>
-
-				<!-- Second Container -->
-				<div class="col-lg-12 col-md-12 col-xs-12" id="FourthSectionInMobile">
-					<div class="col-lg-6 col-md-6 col-xs-12" id="Career_Container">
-						<div class="col-lg-3 col-md-3 col-xs-6" id="SectionCareerFrontImage">
-							<img class="CareerFrontImage" src="images/CareerAsset8.png" />
-						</div>
-						<div class="col-lg-3 col-md-3 col-xs-6" id="ContentCareerContainer">
-							<h2 class="HeaderFrontEnd">
-								<b class="SeniorBold"> UI/UX </b>
-							</h2>
-							<h2 class="HeaderBoldFrontEndDeveloper"> <b class="FrontEndBold"> DESIGNER </b> </h2>
-							<button class="Career_ButtonApplyNow" onclick="GoToDetails();">
-								<h2 class="ApplyNowFont"> <b class="Bold_Apply"> APPLY NOW </b> </h2>
-							</button>
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 col-xs-12" id="Career_Container">
-						<div class="col-lg-3 col-md-3 col-xs-6" id="SectionCareerFrontImage">
-							<img class="CareerFrontImage" src="images/CareerAsset8.png" />
-						</div>
-						<div class="col-lg-3 col-md-3 col-xs-6" id="Right_CareerContainer">
-							<h2 class="RightSeniorBoldSection">
-								<b class="RightSeniorBold"> SENIOR </b>
-							</h2>
-							<h2 class="Right_BoldFrontEndDeveloper"> <b class="RightFrontEndBold"> UI/UX DESIGNER </b> </h2>
-							<button class="CareerButtonApplyNow" onclick="GoToDetails();">
-								<h2 class="ApplyNowFont"> <b class="Bold_Apply"> APPLY NOW </b> </h2>
-							</button>
-						</div>
-					</div>
-				</div>
-
-				<!-- Third Container -->
-				<div class="col-lg-12 col-md-12 col-xs-12">
-					<div class="col-lg-6 col-md-6 col-xs-12" id="Career_Container">
-						<div class="col-lg-3 col-md-3 col-xs-6" id="SectionCareerFrontImage">
-							<img class="CareerFrontImage" src="images/CareerAsset9.png" />
-						</div>
-						<div class="col-lg-3 col-md-3 col-xs-6" id="ContentCareerContainer">
-							<h2 class="HeaderFrontEnd">
-								<b class="SeniorBold"> BACK-END </b>
-							</h2>
-							<h2 class="HeaderBoldFrontEndDeveloper"> <b class="FrontEndBold"> DEVELOPER </b> </h2>
-							<button class="Career_ButtonApplyNow" onclick="GoToDetails();">
-								<h2 class="ApplyNowFont"> <b class="Bold_Apply"> APPLY NOW </b> </h2>
-							</button>
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 col-xs-12" id="Career_Container">
-						<div class="col-lg-3 col-md-3 col-xs-6" id="SectionCareerFrontImage">
-							<img class="CareerFrontImage" src="images/CareerAsset9.png" />
-						</div>
-						<div class="col-lg-3 col-md-3 col-xs-6" id="Right_CareerContainer">
-							<h2 class="RightSeniorBoldSection">
-								<b class="RightSeniorBold"> SENIOR </b>
-							</h2>
-							<h2 class="Right_BoldFrontEndDeveloper"> <b class="RightFrontEndBold"> BACK-END DEVELOPER </b> </h2>
-							<button class="CareerButtonApplyNow" onclick="GoToDetails();">
-								<h2 class="ApplyNowFont"> <b class="Bold_Apply"> APPLY NOW </b> </h2>
-							</button>
-						</div>
-					</div>
-				</div>
-
-				<!-- Fourth Container -->
-				<div class="col-lg-12 col-md-12 col-xs-12">
-					<div class="col-lg-6 col-md-6 col-xs-12" id="Career_Container">
-						<div class="col-lg-3 col-md-3 col-xs-6" id="SectionCareerFrontImage">
-							<img class="CareerFrontImage" src="images/CareerAsset10.png" />
-						</div>
-						<div class="col-lg-3 col-md-3 col-xs-6" id="ContentCareerContainer">
-							<h2 class="HeaderFrontEnd">
-								<b class="SeniorBold"> QUALITY </b>
-							</h2>
-							<h2 class="HeaderBoldFrontEndDeveloper"> <b class="FrontEndBold"> CONTROL </b> </h2>
-							<button class="Career_ButtonApplyNow" onclick="GoToDetails();">
-								<h2 class="ApplyNowFont"> <b class="Bold_Apply"> APPLY NOW </b> </h2>
-							</button>
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 col-xs-12" id="Career_Container">
-						<div class="col-lg-3 col-md-3 col-xs-6" id="SectionCareerFrontImage">
-							<img class="CareerFrontImage" src="images/CareerAsset10.png" />
-						</div>
-						<div class="col-lg-3 col-md-3 col-xs-6" id="Right_CareerContainer">
-							<h2 class="RightSeniorBoldSection">
-								<b class="RightSeniorBold"> SENIOR </b>
-							</h2>
-							<h2 class="Right_BoldFrontEndDeveloper"> <b class="RightFrontEndBold"> QUALITY CONTROL </b> </h2>
-							<button class="CareerButtonApplyNow" onclick="GoToDetails();">
-								<h2 class="ApplyNowFont"> <b class="Bold_Apply"> APPLY NOW </b> </h2>
-							</button>
-						</div>
-					</div>
-				</div>
-
-				<!--<script>
-					function GoToDetails() {
-						window.location.href = 'CareerDetails.html';
-					}
-				</script>-->
-				<!-- Fifth Container -->
-				<!--<div class="col-lg-12 col-md-12 col-xs-12" id="FourthSection_InMobile">
-					<div class="col-lg-6 col-md-6 col-xs-12" id="Career_Container">
-						<div class="col-lg-3 col-md-3 col-xs-6" id="SectionCareerFrontImage">
-							<img class="CareerFrontImage" src="images/CareerAsset7.png" />
-						</div>
-						<div class="col-lg-3 col-md-3 col-xs-6" id="ContentCareerContainer">
-							<h2 class="HeaderFrontEnd">
-								<b class="SeniorBold"> FRONT-END </b>
-							</h2>
-							<h2 class="HeaderBoldFrontEndDeveloper"> <b class="FrontEndBold"> DEVELOPER </b> </h2>
-							<button class="Career_ButtonApplyNow" onclick="GoToDetails();">
-								<h2 class="ApplyNowFont"> <b class="Bold_Apply"> APPLY NOW </b> </h2>
-							</button>
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 col-xs-12" id="Career_Container">
-						<div class="col-lg-3 col-md-3 col-xs-6" id="SectionCareerFrontImage">
-							<img class="CareerFrontImage" src="images/CareerAsset7.png" />
-						</div>
-						<div class="col-lg-3 col-md-3 col-xs-6" id="Right_CareerContainer">
-							<h2 class="RightSeniorBoldSection">
-								<b class="RightSeniorBold"> SENIOR </b>
-							</h2>
-							<h2 class="Right_BoldFrontEndDeveloper"> <b class="RightFrontEndBold"> FRONT-END DEVELOPER </b> </h2>
-							<button class="CareerButtonApplyNow" onclick="GoToDetails();">
-								<h2 class="ApplyNowFont"> <b class="Bold_Apply"> APPLY NOW </b> </h2>
-							</button>
-						</div>
-					</div>
-				</div>-->
-			</div>
 
 			<div class="row" id="FirstFooter">
 				<div class="col-lg-3 col-md-3 col-xs-3">
@@ -350,11 +203,7 @@
 					<h3 class="FooterAboutUsHeader"><b>About Us</b></h3>
 
 					<p class="FooterContentAboutUs">
-						Lorem ipsum dolor sit amet, consectetuer
-						adipiscing elit, sed diam nonummy nibh
-						euismod tincidunt ut laoreet dolore magna
-						aliquam erat volutpat. Ut wisi enim ad minim
-						veniam, quis nostrud exerci tation ullam
+						ArabDT, is an Egyptian company, specialized in information technology services, consulting, and business process outsourcing.
 					</p>
 
 					<a class="st-btn" data-network="linkedin" href="https://www.linkedin.com/" id="FooterSocialMediaLink">
@@ -377,10 +226,25 @@
 				<div class="col-lg-3 col-md-3 col-xs-3">
 					<h3 class="AboutUsHeader"> <b> Our Services </b> </h3>
 					<ul class="OurServicesContentContainer">
-						<li class="OurServiceFooterContent">Lorem ipsum Lorem ipsum</li>
-						<li class="OurServiceFooterContent">Lorem ipsum Lorem ipsum</li>
-						<li class="OurServiceFooterContent">Lorem ipsum Lorem ipsum</li>
-						<li class="OurServiceFooterContent">Lorem ipsum Lorem ipsum</li>
+						<li class="OurServiceFooterContent">
+							<a class="OurServiceFooterHeader" href="Offshoredevelopment.html">Offshore development</a>
+							<!--Lorem ipsum Lorem ipsum-->
+						</li>
+						<li class="OurServiceFooterContent">
+							<a class="OurServiceFooterHeader" href="Outsourcing.html">Out sourcing</a>
+						</li>
+						<li class="OurServiceFooterContent">
+							<a class="OurServiceFooterHeader" href="QualityAssurance&Testing.html">Quality Assurance</a>
+						</li>
+						<li class="OurServiceFooterContent">
+							<a class="OurServiceFooterHeader" href="SoftwareSolutions.html">Software Solutions</a>
+						</li>
+						<li class="OurServiceFooterContent">
+							<a class="OurServiceFooterHeader" href="TurnkeySolutions.html">Turnkey Solutions</a>
+						</li>
+						<li class="OurServiceFooterContent">
+							<a class="OurServiceFooterHeader" href="WebSolutions.html">Web Solutions</a>
+						</li>
 					</ul>
 				</div>
 
@@ -388,16 +252,17 @@
 					<h3 class="AboutUsHeader"> <b> Contact Us </b> </h3>
 					<ul class="Phone">
 						<li class="FooterContent">Mobile:</li>
-						<li class="FooterContentOne">+20 011234567890</li>
+						<li class="FooterContentOne">+201001612287</li>
+						<li class="FooterContentOne">+201099300816</li>
 
 						<li class="FooterContent">Telephone:</li>
-						<li class="FooterContentTwo">+20 23456789</li>
+						<li class="FooterContentTwo">+2 025648201</li>
 
 						<li class="FooterContent">Email:</li>
-						<li class="FooterContentThree">Lorem ipsum@gmail.com</li>
+						<li class="FooterContentThree">Info@arabdt.com</li>
 
 						<li class="FooterContent">Address:</li>
-						<li class="FooterContentFour">Lorem ipsum Lorem ipsum</li>
+						<li class="FooterContentFour">5th District, New Cairo, Cairo,Egypt</li>
 					</ul>
 				</div>
 
@@ -455,8 +320,8 @@
 					<a href="#top" id="button">
 					</a>
 
-					<!--<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>-->
-					<!--<script>
+					<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+					<script>
 						var btn = $('#button');
 
 						$(window).scroll(function () {
@@ -471,15 +336,12 @@
 							e.preventDefault();
 							$('html, body').animate({ scrollTop: 0 }, '300');
 						});
-					</script>-->
+					</script>
 				</div>
 			</div>
 		</div>
 	</div>
-
 	<!-- Scripts -->
-	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="js/ArabDT.js"></script>
 
 	<script src="js/jquery-1.10.2.min.js"></script>
 	<script src="js/jquery-migrate-1.2.1.min.js"></script>

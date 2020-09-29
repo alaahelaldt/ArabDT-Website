@@ -3,51 +3,53 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>ArabDT - About Us</title>
+	<title>ArabDT - Turnkey Solutions </title>
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<meta name="author" content="templatemo">
-	<!--
-	Medigo Template
-	http://www.templatemo.com/preview/templatemo_460_medigo
-	-->
+
 	<!-- Google Fonts -->
 	<link href="http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700itali" rel="stylesheet">
 	<link href="http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,500,200,100,600" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 	<!-- Stylesheets -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/darkly/bootstrap.min.css">
 	<link rel="stylesheet" href="bootstrap/bootstrap.css">
 	<link rel="stylesheet" href="css/red-scheme.css">
+	<link rel="stylesheet" href="css/SliderStyle.css">
 
 	<link rel="shortcut icon" href="images/ArabIcon.ico" type="image/x-icon" />
 
 </head>
-<body class="AboutUsBody">
+<body class="ServiceDetailsBody">
 	<div class="responsive_menu" id="MenuResponsive">
 		<ul class="main_menu">
 			<li class="IndexPage"><a class="IndexLink" href="index.html">Home</a></li>
-			<li class="active IndexPage"><a class="IndexLink" href="AboutUs.html">About Us</a></li>
-			<li class="IndexPage">
+			<li class="IndexPage"><a class="IndexLink" href="AboutUs.html">About Us</a></li>
+			<li class="active IndexPage">
 				<div class="dropdown">
 					<a class="IndexLink" href="OurServices.html">Our Services</a>
 					<i class="IndexLink dropbtn fa fa-chevron-down" onclick="myFunction();"></i>
 
 					<div id="myServiceDropdown" class="dropdown-content">
-						<a class="ServiceBorder IndexLinkDropDown" href="Offshoredevelopment.html">Offshore development</a>
-						<a class="ServiceBorder IndexLinkDropDown" href="Outsourcing.html">Out sourcing</a>
-						<a class="ServiceBorder IndexLinkDropDown" href="QualityAssurance&Testing.html">Quality Assurance</a>
-						<a class="ServiceBorder IndexLinkDropDown" href="SoftwareSolutions.html">Software Solutions</a>
-						<a class="ServiceBorder IndexLinkDropDown" href="TurnkeySolutions.html">Turnkey Solutions</a>
-						<a class="ServiceBorder IndexLinkDropDown" href="WebSolutions.html">Web Solutions</a>
+						<a class="IndexLinkDropDown" href="Offshoredevelopment.html">Offshore development</a>
+						<a class="IndexLinkDropDown" href="Outsourcing.html">Out sourcing</a>
+						<a class="IndexLinkDropDown" href="QualityAssurance&Testing.html">Quality Assurance</a>
+						<a class="IndexLinkDropDown" href="SoftwareSolutions.html">Software Solutions</a>
+						<a class="IndexLinkDropDown" href="TurnkeySolutions.html">Turnkey Solutions</a>
+						<a class="IndexLinkDropDown" href="WebSolutions.html">Web Solutions</a>
 					</div>
 
 				</div>
-				<!--<script>
+				<script>
+					/* When the user clicks on the button,
+					toggle between hiding and showing the dropdown content */
 					function myFunction() {
 						document.getElementById("myServiceDropdown").classList.toggle("show");
 					}
 
+					// Close the dropdown if the user clicks outside of it
 					window.onclick = function (event) {
 						if (!event.target.matches('#ServiceDown')) {
 							var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -60,7 +62,7 @@
 							}
 						}
 					}
-				</script>-->
+				</script>
 			</li>
 			<li class="IndexPage"><a class="IndexLink" href="Career.html">Careers</a></li>
 			<li class="IndexPage"><a class="IndexLink" href="ContactUs.html">Contact Us</a></li>
@@ -76,7 +78,7 @@
 
 				</div>
 
-				<!--<script>
+				<script>
 					function myEnFunction() {
 						document.getElementById("myEnDropdown").classList.toggle("show");
 					}
@@ -93,7 +95,7 @@
 							}
 						}
 					}
-				</script>-->
+				</script>
 			</li>
 		</ul>
 	</div>
@@ -110,23 +112,20 @@
 
 					<div class="main-navigation pull-right">
 						<nav class="main-nav visible-md visible-lg">
-							<ul class="sf-menu" id="NavBarAboutUsHeader">
+							<ul class="sf-menu" id="NavBarOurServicesHeader">
 								<li id="AboutUsNavBar"><a id="DivOfAllHome" href="index.html">Home</a></li>
+								<li id="AboutUsNavBar"><a id="DivOfAllAboutUs" href="AboutUs.html">About Us</a></li>
 								<li id="AboutUsNavBar" class="active">
-									<a href="AboutUs.html">About Us</a>
-									<div id="mainDivAboutUs">
+									<a href="OurServices.html">Our Services</a>
+									<div id="mainDivOurServices">
 									</div>
-								</li>
-								<li id="AboutUsNavBar">
-									<a id="DivOfAllOurServices" href="OurServices.html">Our Services</a>
-
 									<ul>
-										<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="Offshoredevelopment.html">Offshore development</a></li>
-										<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="Outsourcing.html">Out sourcing</a></li>
-										<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="QualityAssurance&Testing.html">Quality Assurance</a></li>
-										<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="SoftwareSolutions.html">Software Solutions</a></li>
-										<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="TurnkeySolutions.html">Turnkey Solutions</a></li>
-										<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="WebSolutions.html">Web Solutions</a></li>
+										<li class="ServiceBorder ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="Offshoredevelopment.html">Offshore development</a></li>
+										<li class="ServiceBorder ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="Outsourcing.html">Out sourcing</a></li>
+										<li class="ServiceBorder ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="QualityAssurance&Testing.html">Quality Assurance</a></li>
+										<li class="ServiceBorder ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="SoftwareSolutions.html">Software Solutions</a></li>
+										<li class="ServiceBorder ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="TurnkeySolutions.html">Turnkey Solutions</a></li>
+										<li class="ServiceBorder ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="WebSolutions.html">Web Solutions</a></li>
 									</ul>
 								</li>
 								<li id="AboutUsNavBar"><a id="DivOfAllCareer" href="Career.html">Careers</a></li>
@@ -139,19 +138,19 @@
 									</ul>
 								</li>
 							</ul>
-							<!--<script>
+							<script>
 								$(document).ready(function () {
 									$('sf-menu li a').click(function () {
 										$('li a').removeClass("active ");
 										$(this).addClass("active");
 									});
 								});
-							</script>-->
+							</script>
 						</nav>
 
 						<div class="responsive-navigation visible-sm visible-xs">
 							<a href="#nogo" class="menu-toggle-btn">
-								<i class="fa fa-bars"></i>
+								<i class="fa fa-bars HomeMinMenu"></i>
 							</a>
 						</div>
 
@@ -164,82 +163,34 @@
 		</div>
 	</header> <!-- Header -->
 
-	<div class="container p-3 my-3">
+	<div class="container">
+		<div id="ServiceDetailsSectionPicture">
+			<img class="img-fluid" id="ServiceDetailsPicture" src="images/Mobile.png" alt="alternative" />
+		</div>
+
+		<div>
+			<h1 class="ContainerHeaderOfServiceDetails">
+				<b class="ServiceDetailsHeaderContent">
+					TURNKEY SOLUTIONS
+				</b>
+			</h1>
+
+			<p class="FirstServiceDetailsContentBody">
+				ArabDT takes up projects under this service for a fixed price and takes all responsibility of execution and
+				project management. These solutions are ideally suited for projects that are fairly well specified and require
+				well-defined interfacing with the client. Our mature software development processes, combined with excellent 
+				infrastructure have significantly increased the “on-time and on budget” delivery of software in the offshore mode.
+			</p>
+
+			<p class="SecondServiceDetailsContentBody">
+				ArabDT takes up projects under this service for a fixed price and takes all responsibility of execution and
+				project management. These solutions are ideally suited for projects that are fairly well specified and require
+				well-defined interfacing with the client. Our mature software development processes, combined with excellent
+				infrastructure have significantly increased the “on-time and on budget” delivery of software in the offshore mode.
+			</p>
+		</div>
+
 		<div class="col-lg-12 col-md-12 col-sm-12">
-			<div id="AboutUsPictureContainer">
-				<div class="row" id="PictureAboutUsSection">
-					<img class="img-fluid" id="AboutUsFirstPicture" src="images/ArabPicture.png" alt="alternative" />
-				</div>
-			</div>
-
-			<div id="AboutUsContainer">
-				<div class="row" id="ContentAboutUsSection">
-					<h1 class="HeaderOfAboutUs"> <b class="MainHeader">ABOUT US</b> </h1>
-
-					<p id="FirstContentBodyOfAboutUs">
-						ArabDT, is an Egyptian company, specialized in information technology services, 
-						consulting, and business process outsourcing.It envisioned and instigated the adoption of 
-						the flexible business practices, to operate efficiently and produce more value.
-						ArabDT strength lies in perceiving the client’s business processes, culture, 
-						vision and goals across the industry segments and offering client oriented solutions 
-						which are highly reliable.
-
-					</p>
-
-					<p id="SecondContentBodyOfAboutUs">
-						ArabDT, is an Egyptian company, specialized in information technology services,
-						consulting, and business process outsourcing.It envisioned and instigated the adoption of
-						the flexible business practices, to operate efficiently and produce more value.
-						ArabDT strength lies in perceiving the client’s business processes, culture,
-						vision and goals across the industry segments and offering client oriented solutions
-						which are highly reliable.
-					</p>
-				</div>
-			</div>
-
-			<div class="ContainerOfThreeBoxes">
-				<div class="col-lg-4 col-md-12 col-sm-12 p-2">
-					<div class="AboutUsCard">
-						<div class="VisionContainer">
-							<img class="card-image" id="VisionPicture" src="images/vision.png" alt="alternative">
-						</div>
-						<div class="AboutBoxContent">
-							<h1 class="HeaderOfTitle"><b class="TitleOfBoxAboutUs">VISION</b></h1>
-							<p class="BoxAboutUsContentBody">
-								Being the first strategic partners to our clients.
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-12 col-sm-12 p-2">
-					<div class="AboutUsCard">
-						<div class="MissionContainer">
-							<img class="card-image" id="MissionPicture" src="images/mission.png" alt="alternative">
-						</div>
-						<div class="AboutBoxContent">
-							<h1 class="HeaderOfTitle"><b class="TitleOfBoxAboutUs">MISSION</b></h1>
-							<p class="BoxAboutUsContentBody">
-								Best Software quality with minimum effort.
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-12 col-sm-12 p-2">
-					<div class="AboutUsCard">
-						<div class="ValuesContainer">
-							<img class="card-image" id="ValuesPicture" src="images/values.png" alt="alternative">
-						</div>
-						<div class="AboutBoxContent">
-							<h1 class="HeaderOfTitle"><b class="TitleOfBoxAboutUs">VALUES</b></h1>
-							<p class="BoxAboutUsContentBody">
-								Trust, Flexibility, Simplicity, Transparency, Team work, Knowledge sharing.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
 
 			<div class="row" id="FirstFooter">
 				<div class="col-lg-3 col-md-3 col-xs-3">
@@ -367,7 +318,7 @@
 					<a href="#top" id="button">
 					</a>
 
-					<!--<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+					<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 					<script>
 						var btn = $('#button');
 
@@ -383,17 +334,12 @@
 							e.preventDefault();
 							$('html, body').animate({ scrollTop: 0 }, '300');
 						});
-					</script>-->
+					</script>
 				</div>
 			</div>
 		</div>
-
-
 	</div>
-
 	<!-- Scripts -->
-	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="js/ArabDT.js"></script>
 
 	<script src="js/jquery-1.10.2.min.js"></script>
 	<script src="js/jquery-migrate-1.2.1.min.js"></script>

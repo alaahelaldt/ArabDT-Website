@@ -14,6 +14,7 @@ http://www.templatemo.com/preview/templatemo_460_medigo
     font-family: AgencyFB;
     src: url(fonts/AgencyFB-BoldCondensed.otf);
 
+
 }
 
 @font-face {
@@ -2758,20 +2759,15 @@ blockquote {
     text-align: center;
 }
 
-#TabletContainer {
-    width: 429px;
-    height: 501px;
-}
-
-#Asset6Container {
-    width: 429px;
-    height: 501px;    
-}
+/*#Asset6Container {
+    width: 429px;*/
+    /*height: 501px;*/    
+/*}
 
 #Asset7Container {
     width: 429px;
     height: 501px;
-}
+}*/
 
 .ProjectsImages {
     /*background-color: #fff;*/
@@ -2877,6 +2873,15 @@ blockquote {
     border: 1px solid #FFFFFF;
     background-image: none;
     background: no-repeat;
+}
+
+.DownImage {
+    width: 15.47px;
+    height: 10.55px;
+    padding-left: 0px;
+    margin-top: 5px;
+    margin-bottom: 7px;
+    margin-left: 7px;
 }
 
 #dropdownMenuButton {
@@ -3190,9 +3195,9 @@ blockquote {
 
 .ProjectsSliderHeader {
     margin-top: 0px;
-    /*font-family: 'Agency FB', arial;*/
-    font-family: AgencyFB, arial;
-    font-size: 61px;
+    font-family: 'Agency FB', arial;
+    /*font-family: AgencyFB, arial;*/
+    font-size:50px;
     text-align: center;
     color: white;
     margin-bottom: 2px;
@@ -3200,9 +3205,9 @@ blockquote {
 
 .OurServicesSliderHeader {
     margin-top: 0px;
-    /*font-family: 'Agency FB', arial;*/
-    font-family: AgencyFB, arial;
-    font-size: 61px;
+    font-family: 'Agency FB', arial;
+    /*font-family: AgencyFB, arial;*/
+    font-size: 50px;
     text-align: center;
     color: white;
     margin-bottom: 2px;
@@ -3210,9 +3215,11 @@ blockquote {
 
 .ProjectsSliderContent {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 11.05px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1px;
     width: 281px;
-    height: 122px;
+    /* height: 122px; */
     margin-left: 75px;
     color: white;
     margin-bottom: 35px;
@@ -3220,12 +3227,14 @@ blockquote {
 
 .OurServicesSliderContent {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1px;
     width: 281px;
-    height: 122px;
+    /*height: 122px;*/
     margin-left: 75px;
     color: white;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .cascade-slider_item.now {
@@ -3256,7 +3265,7 @@ blockquote {
 
 #LabTopContainer {
     width: 429px;
-    height: 501px;
+    /*height: 501px;*/
     background: #071F35 0% 0% no-repeat padding-box;
     box-shadow: 4px 4px 5px #0000004D;
     /*background: #00A69C 0% 0% no-repeat padding-box;
@@ -3266,15 +3275,17 @@ blockquote {
 
 #Asset8Container {
     width: 429px;
-    height: 501px;
+    /*height: 501px;*/
     background: #071F35 0% 0% no-repeat padding-box;
     box-shadow: 4px 4px 5px #0000004D;
+    /*background: #00A69C 0% 0% no-repeat padding-box;
+                                    box-shadow: 4px 4px 5px #0000004D;*/
     opacity: 1;
 }
 
 #TabletContainer {
     width: 429px;
-    height: 501px;
+    /*height: 501px;*/
     background: #071F35 0% 0% no-repeat padding-box;
     box-shadow: 4px 4px 5px #0000004D;
     /*background: #00A69C 0% 0% no-repeat padding-box;
@@ -3287,7 +3298,9 @@ blockquote {
     height: 501px;
     background: #071F35 0% 0% no-repeat padding-box;
     box-shadow: 4px 4px 5px #0000004D;
-    opacity: 1
+    /*background: #00A69C 0% 0% no-repeat padding-box;
+    box-shadow: 4px 4px 5px #0000004D;*/
+    opacity: 1;
 }
 
 .cascade-slider_container {
@@ -3317,43 +3330,45 @@ blockquote {
     }*/
 
 #DarkContainer.next {
-    left: 60.5%;
-    transform: translateY(-50%) translateX(-150%) scale(0.6);
+    width: 429px;
+    /* height: 511px; */
+    background: #071F35 0% 0% no-repeat padding-box;
+    box-shadow: 4px 4px 5px #0000004D;
+    transform: translateY(-50%) translateX(-130%) scale(0.6);
     opacity: 1;
-    z-index: 1;
 }
 
 #LabTopContainer.next {
     left: 60.5%;
-    transform: translateY(-50%) translateX(-150%) scale(0.6);
+    transform: translateY(-50%) translateX(-155%) scale(0.6);
     opacity: 1;
     z-index: 1;
 }
 
 #TabletContainer.next {
     left: 60.5%;
-    transform: translateY(-50%) translateX(-150%) scale(0.6);
+    transform: translateY(-50%) translateX(-155%) scale(0.6);
     opacity: 1;
     z-index: 1;
 }
 
 #DarkContainer.prev {
     left: 39%;
-    transform: translateY(-50%) translateX(50%) scale(0.6);
+    transform: translateY(-50%) translateX(55%) scale(0.6);
     opacity: 1;
     z-index: 1;
 }
 
 #LabTopContainer.prev {
     left: 39%;
-    transform: translateY(-50%) translateX(50%) scale(0.6);
+    transform: translateY(-50%) translateX(55%) scale(0.6);
     opacity: 1;
     z-index: 1;
 }
 
 #TabletContainer.prev {
     left: 39%;
-    transform: translateY(-50%) translateX(50%) scale(0.6);
+    transform: translateY(-50%) translateX(55%) scale(0.6);
     opacity: 1;
     z-index: 1;
 }
@@ -3411,43 +3426,45 @@ blockquote {
 
 
 #Asset6Container.next {
-    left: 60.5%;
-    transform: translateY(-50%) translateX(-150%) scale(0.6);
+    width: 429px;
+    /* height: 511px; */
+    background: #071F35 0% 0% no-repeat padding-box;
+    box-shadow: 4px 4px 5px #0000004D;
+    transform: translateY(-50%) translateX(-130%) scale(0.6);
     opacity: 1;
-    z-index: 1;
 }
 
 #Asset8Container.next {
     left: 60.5%;
-    transform: translateY(-50%) translateX(-150%) scale(0.6);
+    transform: translateY(-50%) translateX(-155%) scale(0.6);
     opacity: 1;
     z-index: 1;
 }
 
 #Asset7Container.next {
     left: 60.5%;
-    transform: translateY(-50%) translateX(-150%) scale(0.6);
+    transform: translateY(-50%) translateX(-155%) scale(0.6);
     opacity: 1;
     z-index: 1;
 }
 
 #Asset6Container.prev {
     left: 39%;
-    transform: translateY(-50%) translateX(50%) scale(0.6);
+    transform: translateY(-50%) translateX(55%) scale(0.6);
     opacity: 1;
     z-index: 1;
 }
 
 #Asset8Container.prev {
     left: 39%;
-    transform: translateY(-50%) translateX(50%) scale(0.6);
+    transform: translateY(-50%) translateX(55%) scale(0.6);
     opacity: 1;
     z-index: 1;
 }
 
 #Asset7Container.prev {
     left: 39%;
-    transform: translateY(-50%) translateX(50%) scale(0.6);
+    transform: translateY(-50%) translateX(55%) scale(0.6);
     opacity: 1;
     z-index: 1;
 }
@@ -3477,11 +3494,11 @@ blockquote {
 }
 
 .cascade-slider_arrow-left {
-    left: 0;
+    left: -5%;
 }
 
 .cascade-slider_arrow-right {
-    right: 0;
+    right: -4%;
 }
 
 .cascade-slider_nav {

@@ -1,65 +1,998 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>ArabDT - Home Page</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="templatemo">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.19.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.19.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.19.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.19.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.19.1/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+    <!-- Google Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700itali" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,500,200,100,600" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/red-scheme.css">
+    <link rel="stylesheet" href="css/SliderStyle.css">
+
+    <link rel="shortcut icon" href="images/ArabIcon.ico" type="image/x-icon" />
+
+
+</head>
+<body class="CareerDetailsBody">
+    <!-- Main Container -->
+    <div class="responsive_menu" id="MenuResponsive">
+        <ul class="main_menu">
+            <li class="active IndexPage"><a class="IndexLink" href="index.html">Home</a></li>
+            <li class="IndexPage"><a class="IndexLink" href="AboutUs.html">About Us</a></li>
+            <li class="IndexPage">
+                <div class="dropdown">
+                    <a class="IndexLink" href="OurServices.html">Our Services</a>
+                    <i class="IndexLink dropbtn fa fa-chevron-down" onclick="myFunction();"></i>
+                    <!--<img class="dropbtn" id="ServiceDown" onclick="myFunction();" src="images/Down.png" />-->
+
+                    <div id="myServiceDropdown" class="dropdown-content">
+                        <a class="ServiceBorder IndexLinkDropDown" href="Offshoredevelopment.html">Offshore development</a>
+                        <a class="ServiceBorder IndexLinkDropDown" href="Outsourcing.html">Out sourcing</a>
+                        <a class="ServiceBorder IndexLinkDropDown" href="QualityAssurance&Testing.html">Quality Assurance</a>
+                        <a class="ServiceBorder IndexLinkDropDown" href="SoftwareSolutions.html">Software Solutions</a>
+                        <a class="ServiceBorder IndexLinkDropDown" href="TurnkeySolutions.html">Turnkey Solutions</a>
+                        <a class="ServiceBorder IndexLinkDropDown" href="WebSolutions.html">Web Solutions</a>
+                    </div>
+
+                </div>
+                <script>
+                    function myFunction() {
+                        document.getElementById("myServiceDropdown").classList.toggle("show");
+                        
+                    }
+
+                    window.onclick = function (event) {
+                       
+                        if (!event.target.matches('#ServiceDown')) {
+                            var dropdowns = document.getElementsByClassName("dropdown-content");
+                            var i;
+                            for (i = 0; i < dropdowns.length; i++) {
+                                var openDropdown = dropdowns[i];
+                                if (openDropdown.classList.contains('show')) {
+                                    openDropdown.classList.remove('show');
+                                }
+                            }
+                        }
+                    }
+                </script>
+            </li>
+            <li class="IndexPage"><a class="IndexLink" href="Career.html">Careers</a></li>
+            <li class="IndexPage"><a class="IndexLink" href="ContactUs.html">Contact Us</a></li>
+            <li class="IndexPage">
+                <div class="dropdown">
+                    <a class="IndexLink" href="index.html">EN</a>
+                    <i class="IndexLink dropbtn fa fa-chevron-down" onclick="myEnFunction();"></i>
+
+                    <div id="myEnDropdown" class="dropdown-content">
+                        <a class="ServiceBorder IndexLinkDropDown" href="index.html">English</a>
+                        <a class="ServiceBorder IndexLinkDropDown" href="index.html">Arabic</a>
+                    </div>
+
+                </div>
+
+                <script>
+                    function myEnFunction() {
+                        document.getElementById("myEnDropdown").classList.toggle("show");
+                    }
+
+                    window.onclick = function (event) {
+                        if (!event.target.matches('#EnDown')) {
+                            var Endropdowns = document.getElementById("myEnDropdown");
+                            var i;
+                            for (i = 0; i < Endropdowns.length; i++) {
+                                var OpenDropdown = Endropdowns[i];
+                                if (OpenDropdown.classList.contains('show')) {
+                                    OpenDropdown.classList.remove('show');
+                                }
+                            }
+                        }
+                    }
+                </script>
+            </li>
+        </ul>        
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <header class="site-header clearfix" name="top">
+        <div class="container" id="NavBarContainer">
+            <div class="row" id="NavBarRow">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="pull-left logo">
+                        <a href="index.html">
+                            <img class="img-fluid" id="WebsiteLogo" src="images/Logo.png" alt="ArabDT by templatemo">
+                        </a>
+                    </div>
 
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+                    <div class="main-navigation pull-right">
+                        <nav class="main-nav visible-md visible-lg">
+                            <ul class="sf-menu" id="NavBarHomeHeader">
+                                <li id="AboutUsNavBar" class="active">
+                                    <a href="index.html">
+                                        Home
+                                    </a>
+                                    <div id="mainDiv">
+                                    </div>
+                                </li>
+                                <li id="AboutUsNavBar">
+                                    <a id="DivOfAllAboutUs" href="AboutUs.html"> About Us </a>
+                                </li>
+                                <li id="AboutUsNavBar">
+                                    <a id="DivOfAllOurServices" href="OurServices.html">Our Services</a>
+                                    <ul>
+                                        <li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="Offshoredevelopment.html">Offshore development</a></li>
+                                        <li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="Outsourcing.html">Out sourcing</a></li>
+                                        <li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="QualityAssurance&Testing.html">Quality Assurance</a></li>
+                                        <li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="SoftwareSolutions.html">Software Solutions</a></li>
+                                        <li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="TurnkeySolutions.html">Turnkey Solutions</a></li>
+                                        <li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="WebSolutions.html">Web Solutions</a></li>
+                                    </ul>
+                                </li>
+                                <li id="AboutUsNavBar"><a id="DivOfAllCareer" href="Career.html">Careers</a></li>
+                                <li id="AboutUsNavBar"><a id="DivOfAllContactUs" href="ContactUs.html">Contact Us</a></li>
+                                <li id="AboutUsNavBar">
+                                    <a id="DivOfAllLanguage" href="index.html">EN</a>
+                                    <ul id="SectionOfLanguage">
+                                        <li id="LanguageSection" class="ServiceDetailsHeader"><a href="index.html"> Arabic </a></li>
+                                        <li id="LanguageSection" class="ServiceDetailsHeader"><a href="index.html"> English </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <script>
+                                $(document).ready(function () {
+                                    $('sf-menu li a').click(function () {
+                                        $('li a').removeClass("active ");
+                                        $(this).addClass("active");
+                                    });
+                                });
+                            </script>
+                        </nav>
+
+                        <div class="responsive-navigation visible-sm visible-xs">
+                            <a href="#nogo" class="menu-toggle-btn">
+                                <i class="fa fa-bars HomeMinMenu"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </header> <!-- Header -->
+
+    <div class="container p-3 my-3">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+
+            <div id="FisrtSection">
+                <div class="HomeRightContainer">
+                    <div class="row">
+                        <img class="FirstImage" src="images/ArabPicture.png" alt="alternative" />
+                    </div>
+
+                    <div class="row">
+                        <p class="FirstParagraph">
+                            ArabDT, is an Egyptian company, specialized in information technology services, consulting, and business process outsourcing.
+                        </p>
+                    </div>
+
+                    <div class="row">
+                        <a class="btn" href="AboutUs.html" id="FirstImageButton" aria-haspopup="true" aria-expanded="false">
+                            READ MORE
+                            <img class="img-fluid" id="FirstButtonDownImage" src="images/Down.png" alt="alternative" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="HomeLeftContainer">
+                    <div class="Social_Media">
+                        <div class="social_line"></div>
+
+                        <a class="st-btn" data-network="linkedin" href="https://www.linkedin.com/" id="FirstContainerMediaLink">
+                            <img class="Social_MediaImageSize" alt="linkedin sharing button" src="https://platform-cdn.sharethis.com/img/linkedin.svg">
+                        </a>
+
+                        <a class="st-btn st-first" data-network="facebook" href="https://www.facebook.com/" id="FirstContainerMediaLink">
+                            <img class="Social_MediaImageSize" alt="facebook sharing button" src="https://platform-cdn.sharethis.com/img/facebook.svg">
+                        </a>
+
+                        <a class="st-btn" data-network="twitter" href="https://www.twitter.com/" id="FirstContainerMediaLink">
+                            <img class="Social_MediaImageSize" alt="twitter sharing button" src="https://platform-cdn.sharethis.com/img/twitter.svg">
+                        </a>
+
+                        <a class="st-btn" data-network="instagram" href="https://www.instagram.com/" id="FirstContainerMediaLink">
+                            <img class="Social_MediaImageSize" alt="instagram sharing button" src="https://platform-cdn.sharethis.com/img/instagram.svg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h1 class="OurServiceHeaderFont">OUR SERVICES</h1>
+
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators" id="MainSlider">
+                        <li id="CircleCarousel" data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li id="CircleCarousel" data-target="#myCarousel" data-slide-to="1"></li>
+                        <li id="CircleCarousel" data-target="#myCarousel" data-slide-to="2"></li>
+                        <li id="CircleCarousel" data-target="#myCarousel" data-slide-to="3"></li>
+                        <li id="CircleCarousel" data-target="#myCarousel" data-slide-to="4"></li>
+                        <li id="CircleCarousel" data-target="#myCarousel" data-slide-to="5"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="row" id="Loremipsum">
+                                <div class="container">
+                                    <div class="col-lg-12 col-md-12 col-sm-12" id="OurServiceMainContainer">
+                                        <div class="col-lg-6 col-md-6 col-sm-6" id="RightImageContainer">
+                                            <img src="images/Mobile.png" alt="alternative" class="OurServicePicture" />
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6 col-sm-12" id="LeftContentContainer">
+                                            <h1 class="OurServiceParagraphHeader">
+                                                <b> Software Solutions  </b>
+                                            </h1>
+                                            <p class="FirstOurServiceFontParagraph">
+                                                Our services begin from analysis, moving through designing, development,
+                                                testing and implementation to maintenance. Our applications come in all sizes,
+                                                be it a one-table database, or a massive client-server application.
+                                            </p>
+                                            <p class="SecondOurServiceFontParagraph">
+                                                Our services begin from analysis, moving through designing, development,
+                                                testing and implementation to maintenance. 
+                                            </p>
+
+                                            <a class="btn" href="SoftwareSolutions.html" id="OurServiceDropdownMenuButton" >
+                                                READ MORE
+                                                <img class="img-fluid" id="FirstButtonDownImage" src="images/Down.png" alt="alternative" />
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row" id="Loremipsum">
+                                <div class="container">
+                                    <div class="col-lg-12 col-md-12 col-sm-12" id="OurServiceMainContainer">
+
+                                        <div class="col-lg-6 col-md-6 col-sm-6" id="RightImageContainer">
+                                            <img src="images/Mobile.png" alt="alternative" class="OurServicePicture" />
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6 col-sm-12" id="LeftContentContainer">
+                                            <h1 class="OurServiceParagraphHeader">
+                                                <b> Web Solutions </b>
+                                            </h1>
+                                            <p class="FirstOurServiceFontParagraph">
+                                                We provide web solutions & services to help customer reach to a wider customer base,
+                                                you need web consulting to get more return on your investment in your web site.
+                                            </p>
+                                            <p class="SecondOurServiceFontParagraph">
+                                                We provide services to help customer reach to a wider customer base,
+                                                you need web consulting to get more in your web site.
+                                            </p>
+
+                                            <a class="btn" href="WebSolutions.html" id="OurServiceDropdownMenuButton">
+                                                READ MORE
+                                                <img class="img-fluid" id="FirstButtonDownImage" src="images/Down.png" alt="alternative" />
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row" id="Loremipsum">
+                                <div class="container">
+                                    <div class="col-lg-12 col-md-12 col-sm-12" id="OurServiceMainContainer">
+
+                                        <div class="col-lg-6 col-md-6 col-sm-6" id="RightImageContainer">
+                                            <img src="images/Mobile.png" alt="alternative" class="OurServicePicture" />
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6 col-sm-12" id="LeftContentContainer">
+                                            <h1 class="OurServiceParagraphHeader">
+                                                <b> Quality Assurance & Testing  </b>
+                                            </h1>
+                                            <p class="FirstOurServiceFontParagraph">
+                                                ArabDT believes in quality to the max. And quality is one of the most success 
+                                                factors with our customers and partners.
+                                            </p>
+                                            <p class="SecondOurServiceFontParagraph">
+                                                ArabDT believes in quality to the max. And quality is one of the most success
+                                                factors with our customers and partners.
+                                            </p>
+
+                                            <a class="btn" href="QualityAssurance&Testing.html" id="OurServiceDropdownMenuButton">
+                                                READ MORE
+                                                <img class="img-fluid" id="FirstButtonDownImage" src="images/Down.png" alt="alternative" />
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row" id="Loremipsum">
+                                <div class="container">
+                                    <div class="col-lg-12 col-md-12 col-sm-12" id="OurServiceMainContainer">
+
+                                        <div class="col-lg-6 col-md-6 col-sm-6" id="RightImageContainer">
+                                            <img src="images/Mobile.png" alt="alternative" class="OurServicePicture" />
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6 col-sm-12" id="LeftContentContainer">
+                                            <h1 class="OurServiceParagraphHeader">
+                                                <b> Turnkey Solutions </b>
+                                            </h1>
+                                            <p class="FirstOurServiceFontParagraph">
+                                                ArabDT takes up projects under this service for a fixed price and takes all
+                                                responsibility of execution and project management. These solutions are ideally
+                                                suited for projects that are fairly well specified and require well-defined 
+                                                interfacing with the client.
+                                            </p>
+                                            <p class="SecondOurServiceFontParagraph">
+                                                ArabDT takes up projects under this service for a fixed price and takes all
+                                                responsibility of execution and project management. 
+                                            </p>
+
+                                            <a class="btn" href="TurnkeySolutions.html" id="OurServiceDropdownMenuButton">
+                                                READ MORE
+                                                <img class="img-fluid" id="FirstButtonDownImage" src="images/Down.png" alt="alternative" />
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row" id="Loremipsum">
+                                <div class="container">
+                                    <div class="col-lg-12 col-md-12 col-sm-12" id="OurServiceMainContainer">
+
+                                        <div class="col-lg-6 col-md-6 col-sm-6" id="RightImageContainer">
+                                            <img src="images/Mobile.png" alt="alternative" class="OurServicePicture" />
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6 col-sm-12" id="LeftContentContainer">
+                                            <h1 class="OurServiceParagraphHeader">
+                                                <b> Offshore development </b>
+                                            </h1>
+                                            <p class="FirstOurServiceFontParagraph">
+                                                To get the best IT solutions, you don't need to be geographically near us.
+                                                That's because we offer quality offshore development center.
+                                            </p>
+                                            <p class="SecondOurServiceFontParagraph">
+                                                To get the best IT solutions, you don't need to be geographically near us.
+                                                That's because we offer quality offshore development.
+                                            </p>
+
+                                            <a class="btn" href="Offshoredevelopment.html" id="OurServiceDropdownMenuButton">
+                                                READ MORE
+                                                <img class="img-fluid" id="FirstButtonDownImage" src="images/Down.png" alt="alternative" />
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row" id="Loremipsum">
+                                <div class="container">
+                                    <div class="col-lg-12 col-md-12 col-sm-12" id="OurServiceMainContainer">
+                                        <div class="col-lg-6 col-md-6 col-sm-6" id="RightImageContainer">
+                                            <img src="images/Mobile.png" alt="alternative" class="OurServicePicture" />
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6 col-sm-12" id="LeftContentContainer">
+                                            <h1 class="OurServiceParagraphHeader">
+                                                <b> Outsourcing </b>
+                                            </h1>
+                                            <p class="FirstOurServiceFontParagraph">
+                                                When your business is running twenty-four seven to come up with innovative means 
+                                                to maximize its potential, outsourcing isn't just an option it is a necessity.
+                                            </p>
+                                            <p class="SecondOurServiceFontParagraph">
+                                                When your business is running twenty-four seven to come up with innovative means
+                                                to maximize its potential.
+                                            </p>
+
+                                            <a class="btn" href="Outsourcing.html" id="OurServiceDropdownMenuButton">
+                                                READ MORE
+                                                <img class="img-fluid" id="FirstButtonDownImage" src="images/Down.png" alt="alternative" />
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Projects -->
+            <div class="ContainerOfOurProjects">
+                <h1 class="OurProjectsHeaderFont">OUR PROJECTS</h1>
+            </div>
+
+            <div class="cards-1" id="WebOurProjects">
+                <div class="row">
+                    <div class="col-lg-12 col-md-6 text-center">
+                        <section>
+                            <div class="cascade-slider_container" id="cascade-slider">
+
+                                <div class="cascade-slider_slides">
+                                    <div class="cascade-slider_item active" id="DarkContainer">
+                                        <img class="ProjectsImages" src="images/Dark.png" alt="">
+                                        <h2 class="ProjectsSliderHeader"> <b> Lorem ipsum </b> </h2>
+                                        <p class="ProjectsSliderContent">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                            Ut wisi enim ad minim veniam.
+                                        </p>
+                                    </div>
+
+                                    <div class="cascade-slider_item" id="LabTopContainer">
+                                        <img class="ProjectsImages" style="text-align:center;" src="images/LabTop.png" alt="">
+                                        <h2 class="ProjectsSliderHeader"> <b> Lorem ipsum </b> </h2>
+                                        <p class="ProjectsSliderContent">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                            Ut wisi enim ad minim veniam.
+                                        </p>
+                                    </div>
+
+                                    <div class="cascade-slider_item" id="TabletContainer">
+                                        <img class="ProjectsImages" style="text-align:center; " src="images/Tablet.png" alt="">
+                                        <h2 class="ProjectsSliderHeader"> <b> Lorem ipsum </b> </h2>
+                                        <p class="ProjectsSliderContent">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                            Ut wisi enim ad minim veniam.
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <span class="cascade-slider_arrow cascade-slider_arrow-left" data-action="prev">
+                                    <img src="images/Left.png" alt="Left Logo">
+
+                                </span>
+                                <span class="cascade-slider_arrow cascade-slider_arrow-right" data-action="next">
+                                    <img src="images/Right.png" alt="Right Logo">
+
+                                </span>
+                            </div>
+                        </section>
+
+                        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+                        <script src="js/cascade-slider.js"></script>
+
+                        <script>
+                            $('#cascade-slider').cascadeSlider({
+
+                            });
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="OurProjectsSliderOfMobile" class="carousel slide" data-ride="carousel">
+                <!--Indicators-->
+                <!--<ul class="carousel-indicators">
+                    <li data-target="#OurProjectsSliderOfMobile" data-slide-to="0" class="active"></li>
+                    <li data-target="#OurProjectsSliderOfMobile" data-slide-to="1"></li>
+                    <li data-target="#OurProjectsSliderOfMobile" data-slide-to="2"></li>
+                </ul>-->
+                <!--The slideshow-->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div id="DarkContainer">
+                            <img class="ProjectsImages" src="images/Dark.png" alt="">
+                            <h2 class="ProjectsSliderHeader"> <b> Lorem ipsum </b> </h2>
+                            <p class="ProjectsSliderContent">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                Ut wisi enim ad minim veniam.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="carousel-item">
+                        <div id="LabTopContainer">
+                            <img class="ProjectsImages" style="text-align:center;" src="images/LabTop.png" alt="">
+                            <h2 class="ProjectsSliderHeader"> <b> Lorem ipsum </b> </h2>
+                            <p class="ProjectsSliderContent">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                Ut wisi enim ad minim veniam.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div id="TabletContainer">
+                            <img class="ProjectsImages" style="text-align:center; " src="images/Tablet.png" alt="">
+                            <h2 class="ProjectsSliderHeader"> <b> Lorem ipsum </b> </h2>
+                            <p class="ProjectsSliderContent">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                Ut wisi enim ad minim veniam.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Left and right controls-->
+                <a class="carousel-control-prev" id="PrevIcon" href="#OurProjectsSliderOfMobile" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" id="NextIcon" href="#OurProjectsSliderOfMobile" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+
+            <!-- Our Clients -->
+            <div>
+                <h1 class="FontParagraphClient">CLIENTS</h1>
+            </div>
+
+            <div id="WebOurClients" class="cards-1">
+                <div class="row">
+                    <div class="col-lg-12 col-md-6 text-center">
+                        <section>
+                            <div class="cascade-slider_container" id="OurClients-cascade-slider">
+                                <div class="cascade-slider_slides">
+                                    <div class="cascade-slider_item" id="FirstBabelMarts">
+                                        <img class="FirstBabelMartsImage" src="images/RMS.png" alt="">
+                                        <!--<p class="FirstBabelMartsContent">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscineuismodaliquam erat volutpminim veniam,
+                                        </p>-->
+                                    </div>
+                                    <div class="cascade-slider_item" id="SecondBabelMarts">
+                                        <img class="SecondBabelMartsImage" src="images/kafaat.png" alt="">
+                                        <!--<p class="SecondBabelMartsContent">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscineuismodaliquam erat volutpminim veniam,
+                                        </p>-->
+                                    </div>
+                                    <div class="cascade-slider_item" id="ThirdBabelMarts">
+                                        <img class="ThirdBabelMartsImage" src="images/Moddakir.png" alt="">
+                                        <!--<p class="ThirdBabelMartsContent">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscineuismodaliquam erat volutpminim veniam,
+                                        </p>-->
+                                    </div>
+                                    <div class="cascade-slider_item" id="FourthBabelMarts">
+                                        <img class="FourthBabelMartsImage" src="images/snapit!.png" alt="">
+                                        <!--<p class="ThirdBabelMartsContent">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscineuismodaliquam erat volutpminim veniam,
+                                        </p>-->
+                                    </div>
+                                </div>
+
+                                <span class="cascade-slider_arrow cascade-slider_arrow-left" data-action="prev">
+                                    <img class="LeftLogo" src="images/Left.png" alt="Left Logo">
+
+                                </span>
+                                <span class="cascade-slider_arrow cascade-slider_arrow-right" data-action="next">
+                                    <img class="RightLogo" src="images/Right.png" alt="Right Logo">
+
+                                </span>
+                            </div>
+                        </section>
+
+                        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+                        <script src="js/cascade-slider.js"></script>
+
+                        <script>
+                            $('#OurClients-cascade-slider').cascadeSlider({
+
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+            <div id="OurClientsSliderOfMobile" class="carousel slide" data-ride="carousel">
+                <!--Indicators-->
+                <!--<ul class="carousel-indicators">
+                    <li data-target="#OurClientsSliderOfMobile" data-slide-to="0" class="active"></li>
+                    <li data-target="#OurClientsSliderOfMobile" data-slide-to="1"></li>
+                    <li data-target="#OurClientsSliderOfMobile" data-slide-to="2"></li>
+                </ul>-->
+                <!--The slideshow-->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div id="FirstBabelMarts">
+                            <div class="ContainerOfClientImage">
+                                <img class="FirstBabelMartsImage" src="images/RMS.png" alt="">
+                            </div>
+                            <!--<div class="ContainerOfClientContent">
+                                <p class="FirstBabelMartsContent">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscineuismodaliquam erat volutpminim veniam,
+                                </p>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div id="SecondBabelMarts">
+                            <div class="ContainerOfClientImage">
+                                <img class="SecondBabelMartsImage" src="images/kafaat.png" alt="">
+                            </div>
+                            <!--<div class="ContainerOfClientContent">
+                                <p class="SecondBabelMartsContent">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscineuismodaliquam erat volutpminim veniam,
+                                </p>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div id="ThirdBabelMarts">
+                            <div class="ContainerOfClientImage">
+                                <img class="ThirdBabelMartsImage" src="images/Moddakir.png" alt="">
+                            </div>
+                            <!--<div class="ContainerOfClientContent">
+                                <p class="ThirdBabelMartsContent">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscineuismodaliquam erat volutpminim veniam,
+                                </p>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div id="FourthBabelMarts">
+                            <div class="ContainerOfClientImage">
+                                <img class="FourthBabelMartsImage" src="images/snapit!.png" alt="">
+                            </div>
+                            <!--<div class="ContainerOfClientContent">
+                                <p class="ThirdBabelMartsContent">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscineuismodaliquam erat volutpminim veniam,
+                                </p>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+
+                <!--Left and right controls-->
+                <a class="carousel-control-prev" id="ClientPrevIcon" href="#OurClientsSliderOfMobile" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" id="ClientNextIcon" href="#OurClientsSliderOfMobile" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+
+            <!-- WHAT DID THEY SAY ABOUT US -->
+            <div>
+                <h1 class="FontParagraphAboutUs">WHAT DID THEY SAY ABOUT US</h1>
+            </div>
+
+            <div class="container text-center" id="PersonContainer">
+                <div class="MainSlider">
+                    <div class="SubSlider">
+                        <ul class="SliderContainer">
+                            <li>
+                                <div>
+                                    <img class="img-fluid" src="images/Person.png" id="PersonImageABOUTUS">
+                                </div>
+
+                                <div class="OurProjectSliderContent">
+                                    <p id="ContentPerson">
+                                        consectetuer adipiscing elit,
+                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img class="img-fluid" src="images/Person.png" id="PersonImageABOUTUS">
+                                </div>
+
+                                <div class="OurProjectSliderContent">
+                                    <p id="ContentPerson">
+                                        consectetuer adipiscing elit,
+                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img class="img-fluid" src="images/Person.png" id="PersonImageABOUTUS">
+                                </div>
+
+                                <div class="OurProjectSliderContent">
+                                    <p id="ContentPerson">
+                                        consectetuer adipiscing elit,
+                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img class="img-fluid" src="images/Person.png" id="PersonImageABOUTUS">
+                                </div>
+
+                                <div class="OurProjectSliderContent">
+                                    <p id="ContentPerson">
+                                        consectetuer adipiscing elit,
+                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img class="img-fluid" src="images/Person.png" id="PersonImageABOUTUS">
+                                </div>
+
+                                <div class="OurProjectSliderContent">
+                                    <p id="ContentPerson">
+                                        consectetuer adipiscing elit,
+                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" class="slider-arrow sa-left">
+                        <img class="img-fluid" src="images/Left.png">
+                    </a>
+                    <a href="#" class="slider-arrow sa-right">
+                        <img class="img-fluid" src="images/Right.png">
+                    </a>
+                </div>
+
+                <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+                <script src="js/jquery.lbslider.js"></script>
+                <script>
+                    jQuery('.SubSlider').lbSlider({
+                        leftBtn: '.sa-left',
+                        rightBtn: '.sa-right',
+                        visible: 4,
+                        autoPlay: false,
+                        autoPlayDelay: 5
+                    });
+                </script>
+            </div>
+
+            <div id="WHATDIDTHEYSAYSliderOfMobile" class="carousel slide" data-ride="carousel">
+                <!--The slideshow-->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="WhatDidTheySayImageSlider">
+                            <div class="ContainerPersonPicture">
+                                <img class="img-fluid" src="images/Person.png" id="PersonImageABOUTUS">
+                            </div>
+                        </div>
+                        <div class="WhatDidTheySayContentSlider">
+                            <p id="ContentPerson">
+                                consectetuer adipiscing elit,
+                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="WhatDidTheySayImageSlider">
+                            <div class="ContainerPersonPicture">
+                                <img class="img-fluid" src="images/Person.png" id="PersonImageABOUTUS">
+                            </div>
+                        </div>
+                        <div class="WhatDidTheySayContentSlider">
+                            <p id="ContentPerson">
+                                consectetuer adipiscing elit,
+                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="WhatDidTheySayImageSlider">
+                            <div class="ContainerPersonPicture">
+                                <img class="img-fluid" src="images/Person.png" id="PersonImageABOUTUS">
+                            </div>
+                        </div>
+                        <div class="WhatDidTheySayContentSlider">
+                            <p id="ContentPerson">
+                                consectetuer adipiscing elit,
+                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="WhatDidTheySayImageSlider">
+                            <div class="ContainerPersonPicture">
+                                <img class="img-fluid" src="images/Person.png" id="PersonImageABOUTUS">
+                            </div>
+                        </div>
+                        <div class="WhatDidTheySayContentSlider">
+                            <p id="ContentPerson">
+                                consectetuer adipiscing elit,
+                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Left and right controls-->
+                <a class="carousel-control-prev" id="WhatDidTheySayPrevIcon" href="#WHATDIDTHEYSAYSliderOfMobile" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" id="WhatDidTheySayNextIcon" href="#WHATDIDTHEYSAYSliderOfMobile" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+
+        <div>
+            <div class="row" id="FirstFooter">
+                <div class="col-lg-3 col-md-3 col-xs-3">
+                    <img class="img-fluid" id="LogoPicture" src="images/Logo.png" alt="alternative">
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-xs-3" id="SectionOfAboutUsAndSocialMedia">
+                    <h3 class="FooterAboutUsHeader"><b>About Us</b></h3>
+
+                    <p class="FooterContentAboutUs">
+                        ArabDT, is an Egyptian company, specialized in information technology services, consulting, and business process outsourcing.
+                    </p>
+
+                    <a class="st-btn" data-network="linkedin" href="https://www.linkedin.com/" id="FooterSocialMediaLink">
+                        <img class="FooterSocialMediaImageSize" alt="linkedin sharing button" src="https://platform-cdn.sharethis.com/img/linkedin.svg">
+                    </a>
+
+                    <a class="st-btn st-first" data-network="facebook" href="https://www.facebook.com/" id="FooterSocialMediaLink">
+                        <img class="FooterSocialMediaImageSize" alt="facebook sharing button" src="https://platform-cdn.sharethis.com/img/facebook.svg">
+                    </a>
+
+                    <a class="st-btn" data-network="twitter" href="https://www.twitter.com/" id="FooterSocialMediaLink">
+                        <img class="FooterSocialMediaImageSize" alt="twitter sharing button" src="https://platform-cdn.sharethis.com/img/twitter.svg">
+                    </a>
+
+                    <a class="st-btn" data-network="instagram" href="https://www.instagram.com/" id="FooterSocialMediaLink">
+                        <img class="FooterSocialMediaImageSize" alt="instagram sharing button" src="https://platform-cdn.sharethis.com/img/instagram.svg">
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-xs-3">
+                    <h3 class="AboutUsHeader"> <b> Our Services </b> </h3>
+                    <ul class="OurServicesContentContainer">
+                        <li class="OurServiceFooterContent">
+                            <a class="OurServiceFooterHeader" href="Offshoredevelopment.html">Offshore development</a>
+                            <!--Lorem ipsum Lorem ipsum-->
+                        </li>
+                        <li class="OurServiceFooterContent">
+                            <a class="OurServiceFooterHeader" href="Outsourcing.html">Out sourcing</a>
+                        </li>
+                        <li class="OurServiceFooterContent">
+                            <a class="OurServiceFooterHeader" href="QualityAssurance&Testing.html">Quality Assurance</a>
+                        </li>
+                        <li class="OurServiceFooterContent">
+                            <a class="OurServiceFooterHeader" href="SoftwareSolutions.html">Software Solutions</a>
+                        </li>
+                        <li class="OurServiceFooterContent">
+                            <a class="OurServiceFooterHeader" href="TurnkeySolutions.html">Turnkey Solutions</a>
+                        </li>
+                        <li class="OurServiceFooterContent">
+                            <a class="OurServiceFooterHeader" href="WebSolutions.html">Web Solutions</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-xs-3">
+                    <h3 class="AboutUsHeader"> <b> Contact Us </b> </h3>
+                    <ul class="Phone">
+                        <li class="FooterContent">Mobile:</li>
+                        <li class="FooterContentOne">+201001612287</li>
+                        <li class="FooterContentOne">+201099300816</li>
+
+                        <li class="FooterContent">Telephone:</li>
+                        <li class="FooterContentTwo">+2 025648201</li>
+
+                        <li class="FooterContent">Email:</li>
+                        <li class="FooterContentThree">Info@arabdt.com</li>
+
+                        <li class="FooterContent">Address:</li>
+                        <li class="FooterContentFour">5th District, New Cairo, Cairo,Egypt</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-12 col-md-12 col-xs-12">
+                    <p class="copyright-text"> ArabDT Copyrights © 2020 </p>
+                </div>
+            </div>
+
+            <div class="row" id="SecondFooter">
+                <div class="col-md-6 col-xs-12">
+                    <img class="img-fluid" id="LogoPicture" src="images/Logo.png" alt="alternative">
+                </div>
+
+                <div class="col-md-6 col-xs-12" id="SectionContactUs">
+                    <h3 class="FooterHeaderAboutUs"> <b> Contact Us </b> </h3>
+                    <ul class="FooterPhone">
+                        <li class="FooterContentBody">Mobile:</li>
+                        <li class="FooterContentOneSection">+201001612287</li>
+                        <li class="FooterContentOneSection">+201099300816</li>
+
+                        <li class="FooterContentBody">Telephone:</li>
+                        <li class="FooterContentTwoSection">+2 025648201</li>
+
+                        <li class="FooterContentBody">Email:</li>
+                        <li class="FooterContentThreeSection">Info@arabdt.com</li>
+
+                        <li class="FooterContentBody">Address:</li>
+                        <li class="FooterContentFourSection">5th District, New Cairo, Cairo,Egypt</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 col-xs-12" id="MediaSocial">
+                    <a class="st-btn" data-network="linkedin" href="https://www.linkedin.com/" id="FooterSocialMediaLink">
+                        <img class="FooterSocialMediaImageSize" alt="linkedin sharing button" src="https://platform-cdn.sharethis.com/img/linkedin.svg">
+                    </a>
+
+                    <a class="st-btn st-first" data-network="facebook" href="https://www.facebook.com/" id="FooterSocialMediaLink">
+                        <img class="FooterSocialMediaImageSize" alt="facebook sharing button" src="https://platform-cdn.sharethis.com/img/facebook.svg">
+                    </a>
+
+                    <a class="st-btn" data-network="twitter" href="https://www.twitter.com/" id="FooterSocialMediaLink">
+                        <img class="FooterSocialMediaImageSize" alt="twitter sharing button" src="https://platform-cdn.sharethis.com/img/twitter.svg">
+                    </a>
+
+                    <a class="st-btn" data-network="instagram" href="https://www.instagram.com/" id="FooterSocialMediaLink">
+                        <img class="FooterSocialMediaImageSize" alt="instagram sharing button" src="https://platform-cdn.sharethis.com/img/instagram.svg">
+                    </a>
+                </div>
+
+                <p class="copyright_text" id="CopyRight"> ArabDT Copyrights © 2020 </p>
+            </div>
+
+            <div class="container" id="ButtonFooterUp">
+                <div class="UpFooter" id="UPSection">
+                    <a href="#top" id="button">
+                    </a>
+
+                    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+                    <script>
+                        var btn = $('#button');
+
+                        $(window).scroll(function () {
+                            if ($(window).scrollTop() > 300) {
+                                btn.addClass('show');
+                            } else {
+                                btn.removeClass('show');
+                            }
+                        });
+
+                        btn.on('click', function (e) {
+                            e.preventDefault();
+                            $('html, body').animate({ scrollTop: 0 }, '300');
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/min/plugins.min.js"></script>
+    <script src="js/min/medigo-custom.min.js"></script>
+</body>
 </html>

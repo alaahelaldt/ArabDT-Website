@@ -1,12 +1,13 @@
 .MainSlider {
     position: relative;
     margin: 50px auto;
-    width: 1200px;
+    width: 100%;
+    margin-top: 23px;
 }
 
 .SubSlider {
     position: relative;
-    width: 1000px;
+    width: 100%;
     margin: auto;
 }
 
@@ -15,14 +16,13 @@
     padding: 0;
 }
 
-.SliderContainer li {
-    list-style: none;
-    text-align: center;
-    width: 269px;
-    height: 300px;
-    padding-right:10px;
-
-}
+    .SliderContainer li {
+        list-style: none;
+        text-align: center;
+        width: 269px;
+        height: 255px;
+        /*padding-right: 223px;*/
+    }
 /*ul li span {
         display: inline-block;
         vertical-align: middle;
@@ -43,9 +43,9 @@
 }
 
 .sa-left {
-    left: 0px;
+    left: -35px;
 }
 
 .sa-right {
-    right: 0px;
+    right: -3.5%;
 }

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>ArabDT</title>
+	<title>ArabDT - Career Details</title>
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<meta name="author" content="templatemo">
@@ -16,68 +16,124 @@
 	<link rel="stylesheet" href="bootstrap/bootstrap.css">
 	<link rel="stylesheet" href="css/red-scheme.css">
 
-	<!-- JavaScripts -->
-	<script src="js/jquery-1.10.2.min.js"></script>
-	<script src="js/jquery-migrate-1.2.1.min.js"></script>
-
 	<link rel="shortcut icon" href="images/ArabIcon.ico" type="image/x-icon" />
 
 </head>
 <body class="CareerDetailsBody">
-	<div class="responsive_menu">
+	<div class="responsive_menu" id="MenuResponsive">
 		<ul class="main_menu">
-			<li><a href="..\ArabDT\HomePage.html">Home</a></li>
-			<li><a href="..\ArabDT\AboutUs.html">About Us</a></li>
-			<li class="active">
-				<a href="..\ArabDT\OurServices.html">Our Services</a>
-				<ul>
-					<li class="active"><a class="ServiceDetailsFontHeader" href="..\ArabDT\ServiceDetails.html">Lorem ipsum</a></li>
-					<li><a class="ServiceDetailsFontHeader" href="..\ArabDT\ServiceDetails.html">Lorem ipsum</a></li>
-					<li><a class="ServiceDetailsFontHeader" href="..\ArabDT\ServiceDetails.html">Lorem ipsum</a></li>
-				</ul>
+			<li class="IndexPage"><a class="IndexLink" href="index.html">Home</a></li>
+			<li class="IndexPage"><a class="IndexLink" href="AboutUs.html">About Us</a></li>
+			<li class="IndexPage">
+				<div class="dropdown">
+					<a class="IndexLink" href="OurServices.html">Our Services</a>
+					<i class="IndexLink dropbtn fa fa-chevron-down" onclick="myFunction();"></i>
+
+					<div id="myServiceDropdown" class="dropdown-content">
+						<a class="ServiceBorder IndexLinkDropDown" href="Offshoredevelopment.html">Offshore development</a>
+						<a class="ServiceBorder IndexLinkDropDown" href="Outsourcing.html">Out sourcing</a>
+						<a class="ServiceBorder IndexLinkDropDown" href="QualityAssurance&Testing.html">Quality Assurance</a>
+						<a class="ServiceBorder IndexLinkDropDown" href="SoftwareSolutions.html">Software Solutions</a>
+						<a class="ServiceBorder IndexLinkDropDown" href="TurnkeySolutions.html">Turnkey Solutions</a>
+						<a class="ServiceBorder IndexLinkDropDown" href="WebSolutions.html">Web Solutions</a>
+					</div>
+
+				</div>
+				<script>
+					/* When the user clicks on the button,
+					toggle between hiding and showing the dropdown content */
+					function myFunction() {
+						document.getElementById("myServiceDropdown").classList.toggle("show");
+					}
+
+					// Close the dropdown if the user clicks outside of it
+					window.onclick = function (event) {
+						if (!event.target.matches('#ServiceDown')) {
+							var dropdowns = document.getElementsByClassName("dropdown-content");
+							var i;
+							for (i = 0; i < dropdowns.length; i++) {
+								var openDropdown = dropdowns[i];
+								if (openDropdown.classList.contains('show')) {
+									openDropdown.classList.remove('show');
+								}
+							}
+						}
+					}
+				</script>
 			</li>
-			<li><a href="..\ArabDT\Careers.html">Careers</a></li>
-			<li><a href="..\ArabDT\ContactUs.html">Contact Us</a></li>
-			<li>
-				<a href="..\ArabDT\EN.html">EN</a>
-				<ul>
-					<li><a href="blog.html"> Arabic </a></li>
-					<li><a href="blog-single.html"> English </a></li>
-				</ul>
+			<li class="active IndexPage"><a class="IndexLink" href="Career.html">Careers</a></li>
+			<li class="IndexPage"><a class="IndexLink" href="ContactUs.html">Contact Us</a></li>
+			<li class="IndexPage">
+				<div class="dropdown">
+					<a class="IndexPage" href="index.html">EN</a>
+					<i class="IndexLink dropbtn fa fa-chevron-down" onclick="myEnFunction();"></i>
+
+					<div id="myEnDropdown" class="dropdown-content">
+						<a  class="ServiceBorder IndexLinkDropDown" href="index.html">English</a>
+						<a  class="ServiceBorder IndexLinkDropDown" href="index.html">Arabic</a>
+					</div>
+
+				</div>
+
+				<script>
+					function myEnFunction() {
+						document.getElementById("myEnDropdown").classList.toggle("show");
+					}
+
+					window.onclick = function (event) {
+						if (!event.target.matches('#EnDown')) {
+							var Endropdowns = document.getElementById("myEnDropdown");
+							var i;
+							for (i = 0; i < Endropdowns.length; i++) {
+								var OpenDropdown = Endropdowns[i];
+								if (OpenDropdown.classList.contains('show')) {
+									OpenDropdown.classList.remove('show');
+								}
+							}
+						}
+					}
+				</script>
 			</li>
 		</ul>
 	</div>
 
 	<header class="site-header clearfix" name="top">
-		<div class="container">
-			<div class="row">
+		<div class="container" id="NavBarContainer">
+			<div class="row" id="NavBarRow">
 				<div class="col-md-12">
 					<div class="pull-left logo">
-						<a href="..\ArabDT\HomePage.html">
-							<img src="images/Logo.png" alt="ArabDT by templatemo">
+						<a href="index.html">
+							<img class="img-fluid" id="WebsiteLogo" src="images/Logo.png" alt="ArabDT by templatemo">
 						</a>
 					</div>
 
 					<div class="main-navigation pull-right">
 						<nav class="main-nav visible-md visible-lg">
-							<ul class="sf-menu" id="NavBarHeader">
-								<li><a href="..\ArabDT\HomePage.html">Home</a></li>
-								<li><a href="..\ArabDT\AboutUs.html">About Us</a></li>
-								<li>
-									<a href="..\ArabDT\OurServices.html">Our Services</a>
+							<ul class="sf-menu" id="NavBarCareerDetailsHeader">
+								<li id="AboutUsNavBar"><a id="DivOfAllHome" href="index.html">Home</a></li>
+								<li id="AboutUsNavBar"><a id="DivOfAllAboutUs" href="AboutUs.html">About Us</a></li>
+								<li id="AboutUsNavBar">
+									<a id="DivOfAllOurServices" href="OurServices.html">Our Services</a>
 									<ul>
-										<li><a href="..\ArabDT\OurServices.html">Services</a></li>
-										<li><a href="..\ArabDT\OurServices.html">Services</a></li>
-										<li><a href="..\ArabDT\OurServices.html">Services</a></li>
+										<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="Offshoredevelopment.html">Offshore development</a></li>
+										<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="Outsourcing.html">Out sourcing</a></li>
+										<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="QualityAssurance&Testing.html">Quality Assurance</a></li>
+										<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="SoftwareSolutions.html">Software Solutions</a></li>
+										<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="TurnkeySolutions.html">Turnkey Solutions</a></li>
+										<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="WebSolutions.html">Web Solutions</a></li>
 									</ul>
 								</li>
-								<li class="active"><a href="..\ArabDT\Careers.html">Careers</a></li>
-								<li><a href="..\ArabDT\ContactUs.html">Contact Us</a></li>
-								<li>
-									<a href="..\ArabDT\EN.html">EN</a>
-									<ul>
-										<li><a href="blog.html"> Arabic </a></li>
-										<li><a href="blog-single.html"> English </a></li>
+								<li id="AboutUsNavBar" class="active">
+									<a href="Career.html">Careers</a>
+									<div id="mainDiv">
+									</div>
+								</li>
+								<li id="AboutUsNavBar"><a id="DivOfAllContactUs" href="ContactUs.html">Contact Us</a></li>
+								<li id="AboutUsNavBar">
+									<a id="DivOfAllLanguage" href="index.html">EN</a>
+									<ul id="SectionOfLanguage">
+										<li id="LanguageSection" class="ServiceDetailsHeader"><a href="index.html"> Arabic </a></li>
+										<li id="LanguageSection" class="ServiceDetailsHeader"><a href="index.html"> English </a></li>
 									</ul>
 								</li>
 							</ul>
@@ -107,364 +163,368 @@
 		</div>
 	</header> <!-- Header -->
 
-	<header id="header" class="header">
-		<div class="header-content">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 text-center">
-						<div class="text-container">
-							<img class="CareerDetailsPicture" src="images/CareerDetailsAsset.png" alt="alternative" />
+	<div class="container p-3 my-3">
+		<div class="col-lg-12 col-md-12 col-sm-12">
+			<div id="CareerDetailsSectionPicture">
+				<img class="img-fluid" id="CareerDetailsPicture" src="images/CareerDetails.png" alt="alternative" />
 
-							<h1> <b class="CareerDetailsFirstHeaderContent">FRONT-END DEVELOPER</b> </h1>
-						</div>
-					</div>
-				</div>
+				<h1 class="ContainerOfCareerDetailsHeader"> <b class="CareerDetailsFirstHeaderContent">FRONT-END DEVELOPER</b> </h1>
 			</div>
-		</div>
-	</header> <!-- Arab Picture -->
 
+			<div id="SecondCareerDetailsSectionPicture">
+				<h1> <b class="CareerDetailsHeaderContent">JOB DESCRIPTION</b> </h1>
 
-	<header id="CareerDetailsContent" class="header">
-		<div class="container">
-			<div class="col-lg-12 text-center">
-				<div class="col-lg-12">
-					<div class="text-container">
-						<h1> <b class="CareerDetailsHeaderContent">JOB DESCRIPTION</b> </h1>
+				<p class="CareerDetailsContentBody">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+					laoreet dolore magna Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+					euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+				</p>
+			</div>			
 
-						<p class="CareerDetailsContentBody">
-							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-							laoreet dolore magna Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-							euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-						</p>
-					</div>
+			<div id="FourthContainer">
+				<div class="col-lg-12 col-md-12 col-xs-12">
+					<h1 class="ContainerResponsibilities"> <b class="CareerDetailsSecondHeaderContent">RESPONSIBILITIES</b> </h1>
+
+					<p class="CareerDetailsSecondContentBody">
+						Lorem ipsum dolor sit amet, consecLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+						nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+						veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+					</p>
 				</div>
-			</div>
-		</div>
-	</header>
+				
+				<div class="col-lg-6 col-md-12 col-xs-12">
 
-	<header id="CareerDetailsHeaderSecondContent" class="header">
-		<div class="container">
-			<div class="col-lg-12">
-				<h1> <b class="CareerDetailsSecondHeaderContent">RESPONSIBILITIES</b> </h1>
-				<div class="col-lg-12">
-					<div class="text-container">
-						<p class="CareerDetailsSecondContentBody">
-							Lorem ipsum dolor sit amet, consecLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-							nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-							veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-						</p>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</header>
-
-	<header id="CareerDetailsHalfSectionContent" class="header">
-		<div class="container">
-			<div class="col-lg-12">
-
-				<div class="col-lg-6">
-					<h1> <b class="CareerDetailsLeftHeaderContent">QUALIFICATIONS</b> </h1>
-					<div class="text-container">
-						<p class="CareerDetailsLeftContentBody">
-							Lorem ipsum dolor sit amet, consectetuer
-							adipiscing elit, sed diam nonummy nibh
-							euismod tincidunt ut laoreet dolore magna
-							aliquam erat volutpat. Ut wisi enim ad minim
-							veniam, quis nostrud exerci tation
-							ullamcorper suscipit lobortis nisl ut aliquip ex
-							ea commodo consequat. Duis autem vel eum
-						</p>
-					</div>
-				</div>
-
-				<div class="col-lg-6">
-					<h1> <b class="CareerDetailsRightHeaderContent">JOB DETAILS</b> </h1>
-					<div class="text-container">
-						<p class="CareerDetailsRightContentBody">
-							Lorem ipsum dolor sit amet, consectetuer
-							adipiscing elit, sed diam nonummy nibh
-							euismod tincidunt ut laoreet dolore magna
-							aliquam erat volutpat. Ut wisi enim ad minim
-							veniam, quis nostrud exerci tation
-							ullamcorper suscipit lobortis nisl ut aliquip ex
-							ea commodo consequat. Duis autem vel eum
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-
-	<header id="CareerDetailsApplyContent" class="header">
-		<div class="header-content">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 text-center">
-						<div class="col-lg-2">
-						</div>
-
-						<div class="col-lg-8" id="CareerDetailsApplyContainer">
-							<div class="text-container">
-								<h1> <b class="Apply">APPLY HERE</b> </h1>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-lg-1">
-					</div>
-
-					<div class="col-lg-10 text-center" id="ApplyContainerDiv">
-						<div class="main-agileinfo">
-							<div class="agileits-top">
-								<form class="ApplyForm" action="#" method="post">
-									<div class="row">
-										<div class="col-lg-6">
-											<h2 class="FormHeader"> First Name </h2>
-											<input class="FirstName" id="FirstNameInput" type="text" name="First Name" required="">
-										</div>
-										<div class="col-lg-6">
-											<h2 class="FormHeader"> Last Name </h2>
-											<input class="LastName" id="LastNameInput" type="text" name="Last Name" required="">
-										</div>
-
-										<div class="col-lg-12">
-											<h2 class="FormHeader"> Mobile </h2>
-										</div>
-
-										<div class="col-lg-6">
-											<input class="Mobile" id="MobileInput" type="text" name="Mobile" required="">
-										</div>
-										<div class="col-lg-6">
-											<input class="AnotherMobile" id="AnotherMobileInput" type="text" name="Mobile" required="">
-										</div>
-
-										<div class="col-lg-8">
-											<h2 class="FormHeader"> E-mail Address </h2>
-											<input class="EmailAddress" id="ToEmail" type="email" name="Email" required="">
-										</div>
-
-										<div class="col-lg-12">
-											<h2 class="FormHeader"> Description </h2>
-											<div id="DescriptionContainer">
-												<textarea class="text email" id="Description" name="Description" required=""></textarea>
-											</div>
-										</div>
-
-										<div class="col-lg-12">
-											<h2 class="FormHeader"> CV / PORTFOLIO </h2>
-										</div>
-
-										<div class="col-lg-8">
-											<input class="EmailAddress" id="UploadFile" type="text" name="UploadFile" required="">
-										</div>
-
-										<div class="col-lg-4">
-											<!--<input class="UploadCV" type="file" name="UploadFile" required="">-->
-
-											<!--<button class="UploadCV">
-												UPLOAD
-											</button>-->
-
-											<label class="UploadCV" for="upload-photo">UPLOAD</label>
-											<input type="file" name="photo" id="upload-photo" />
-										</div>
-									</div>
-
-									<input class="ContainerApplySectionSubmit" type="submit" value="Submit">
-
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</header> <!-- GET IN TOUCH -->
-
-	<div class="footer" id="MainSectionOfFooter">
-		<div class="container">
-			<div class="col-lg-12 col-md-6 col-sm-4">
-				<div class="col-lg-2 col-md-3 col-sm-2" id="PictureOfAboutUs">
-					<img class="card-image" id="StyleOfAboutUsPicture" src="images/Logo.png" alt="alternative">
-				</div>
-
-				<div class="col-lg-3 col-md-3 col-sm-2" id="AboutUsContainerFooter">
-					<h3 class="AboutUsHeader"><b>About Us</b></h3>
-
-					<p class="AboutUsFooterContent">
+					<h1 class="ContainerCareerDetailsLeftHeaderContent">
+						<b class="CareerDetailsLeftHeaderContent">QUALIFICATIONS</b>
+					</h1>
+					<p class="CareerDetailsLeftContentBody">
 						Lorem ipsum dolor sit amet, consectetuer
 						adipiscing elit, sed diam nonummy nibh
 						euismod tincidunt ut laoreet dolore magna
 						aliquam erat volutpat. Ut wisi enim ad minim
-						veniam, quis nostrud exerci tation ullam
+						veniam, quis nostrud exerci tation
+						ullamcorper suscipit lobortis nisl ut aliquip ex
+						ea commodo consequat. Duis autem vel eum
+					</p>
+				</div>
+
+				<div class="col-lg-6 col-md-12 col-xs-12">
+					<h1 class="ContainerCareerDetailsLeftHeaderContent">
+						<b class="CareerDetailsRightHeaderContent">JOB DETAILS</b>
+					</h1>
+					<p class="CareerDetailsRightContentBody">
+						Lorem ipsum dolor sit amet, consectetuer
+						adipiscing elit, sed diam nonummy nibh
+						euismod tincidunt ut laoreet dolore magna
+						aliquam erat volutpat. Ut wisi enim ad minim
+						veniam, quis nostrud exerci tation
+						ullamcorper suscipit lobortis nisl ut aliquip ex
+						ea commodo consequat. Duis autem vel eum
+					</p>
+				</div>
+			</div>
+
+			<div class="ContainerOfApplyHere">
+				<h1 class="ContainerApply"> <b class="Apply">APPLY HERE</b> </h1>
+			</div>
+
+			<div class="ContainerOfApplyHereNow">
+				<div class="col-lg-12 col-md-12 col-xs-12 text-center" id="ApplyContainerDiv">
+					<div class="main-agileinfo">
+						<div class="agileits-top">
+							<form class="needs-validation" id="CareerForm" enctype="multipart/form-data" novalidate action=" " method="post">
+								<div class="row">
+									<div class="col-lg-6" id="MobileLabel">
+										<label class="FormHeader"> First Name </label>
+										<input class="FirstName" id="FirstNameInput" type="text" name="First Name" required>
+										<div class="invalid-feedback" id="ErrorMessageCareerFirstName">Please Enter your First Name.</div>
+
+									</div>
+									<div class="col-lg-6" id="MobileLabel">
+										<label class="FormHeader"> Last Name </label>
+										<input class="LastName" id="LastNameInput" type="text" name="Last Name" required>
+										<div class="invalid-feedback" id="ErrorMessageCareerLastName">Please Enter your LastName.</div>
+
+									</div>
+
+									<div class="col-lg-12" id="MobileLabel">
+										<label class="FormHeader"> Mobile </label>
+									</div>
+
+									<div class="col-lg-6" id="MobileLabel">
+										<input class="Mobile" id="MobileInput" type="number" name="Mobile" maxlength="11" minlength="11" required>
+										<div class="invalid-feedback" id="ErrorMessageCareerMobile">Please Enter a valid Mobile.</div>
+
+									</div>
+									<div class="col-lg-6" id="MobileLabel">
+										<input class="AnotherMobile" id="AnotherMobileInput" type="number" name="Mobile" maxlength="11" minlength="11">
+										<div class="invalid-feedback" id="ErrorMessageCareerMobile">Please Enter a valid Mobile.</div>
+
+									</div>
+
+									<div class="col-lg-8" id="MobileLabel">
+										<label class="FormHeader"> E-mail Address </label>
+										<input class="EmailAddress" id="ToEmail" type="email" name="Email" size="30" required>
+										<div class="invalid-feedback" id="ErrorMessageCareerEmail">Please Enter a valid Email.</div>
+
+									</div>
+
+									<div class="col-lg-12" id="MobileLabel">
+										<label class="FormHeader"> Description </label>
+										<div id="DescriptionContainer">
+											<textarea class="text email" id="Description" name="Description" required=""></textarea>
+											<div class="invalid-feedback" id="ErrorMessageCareerDescription">Please Enter a valid Description.</div>
+
+										</div>
+									</div>
+
+									<div class="col-lg-12" id="MobileLabel">
+										<label class="FormHeader"> CV / PORTFOLIO </label>
+									</div>
+
+									<div class="col-lg-8">
+										<input class="EmailAddress" id="UploadFile" type="text" name="UploadFile" readonly>
+										<div class="invalid-feedback" id="ErrorMessageCareerUploadFile">Please Upload a valid CV .</div>
+
+									</div>
+
+									<div class="col-lg-4" id="UploadFileButton">
+										<label class="UploadCV" for="upload-photo">UPLOAD</label>
+										<input type="file" name="myFile[]" id="upload-photo" multiple onchange="myFunction()" />
+									</div>
+								</div>
+
+								<input class="ContainerApplySectionSubmit" type="submit" value="SUBMIT" onclick="sendEmail()">
+
+								<script src="https://smtpjs.com/v3/smtp.js"></script>
+								<script>
+									var GetFile;
+
+									function myFunction() {
+										//alert("Hello");
+										var x = document.getElementById("upload-photo");
+
+										//const filenameList = Array.prototype.map.call(x.files, function (file)
+										//{
+										//	return file.name
+										//})
+
+										//alert(x.files[0].url)
+
+										var Data = $('#upload-photo').val();
+										if ('files' in x) {
+											for (var i = 0; i < x.files.length; i++) {
+												var file = x.files[i];
+												document.getElementById("UploadFile").value = file.name;
+												GetFile = file;
+												var reader = new FileReader();
+												GetFile = reader.readAsArrayBuffer(x.files[0]);
+												//alert(GetFile)
+											}
+										}
+									}
+
+									(function () {
+										'use strict';
+										window.addEventListener('load', function () {
+											var forms = document.getElementsByClassName('needs-validation');
+											var validation = Array.prototype.filter.call(forms, function (form) {
+												form.addEventListener('submit', function (event) {
+													if (form.checkValidity() === false) {
+														event.preventDefault();
+														event.stopPropagation();
+													}
+													form.classList.add('was-validated');
+												}, false);
+											});
+										}, false);
+									})();
+
+									function sendEmail() {
+										//alert($('#upload-photo').val());
+										//alert(GetFile);
+										Email.send({
+                                            SecureToken: "006ee01-879a-4632-898a-d3685cb28e88 ",
+                                            To: "ma7moudzakaria96@outlook.com",
+                                            From: document.getElementById('ToEmail').value,
+											Subject: "New Job",
+											Body: document.getElementById('Description').value,
+
+											//Attachments: [
+											//                                        {
+											//                                            name: document.getElementById("UploadFile").value ,
+											//                                            path: "https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png"
+											//	}]
+
+											//Attachments: [
+											//	{
+											//		name: document.getElementById("UploadFile").value,
+           //                                         path: "https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png"
+											//	}]
+										}).then(
+											alert("WE Finished")
+										);
+
+									}
+								</script>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row" id="FirstFooter">
+				<div class="col-lg-3 col-md-3 col-xs-3">
+					<img class="img-fluid" id="LogoPicture" src="images/Logo.png" alt="alternative">
+				</div>
+
+				<div class="col-lg-3 col-md-3 col-xs-3" id="SectionOfAboutUsAndSocialMedia">
+					<h3 class="FooterAboutUsHeader"><b>About Us</b></h3>
+
+					<p class="FooterContentAboutUs">
+						ArabDT, is an Egyptian company, specialized in information technology services, consulting, and business process outsourcing.
 					</p>
 
-					<a class="st-btn" data-network="googleplus" id="FooterMediaLink">
-						<img class="MediaImageSize" alt="googleplus sharing button" src="https://platform-cdn.sharethis.com/img/googleplus.svg">
+					<a class="st-btn" data-network="linkedin" href="https://www.linkedin.com/" id="FooterSocialMediaLink">
+						<img class="FooterSocialMediaImageSize" alt="linkedin sharing button" src="https://platform-cdn.sharethis.com/img/linkedin.svg">
 					</a>
 
-					<a class="st-btn st-first" data-network="facebook" id="FooterMediaLink">
-						<img class="MediaImageSize" alt="facebook sharing button" src="https://platform-cdn.sharethis.com/img/facebook.svg">
+					<a class="st-btn st-first" data-network="facebook" href="https://www.facebook.com/" id="FooterSocialMediaLink">
+						<img class="FooterSocialMediaImageSize" alt="facebook sharing button" src="https://platform-cdn.sharethis.com/img/facebook.svg">
 					</a>
 
-					<a class="st-btn" data-network="linkedin" id="FooterMediaLink">
-						<img class="MediaImageSize" alt="linkedin sharing button" src="https://platform-cdn.sharethis.com/img/linkedin.svg">
+					<a class="st-btn" data-network="twitter" href="https://www.twitter.com/" id="FooterSocialMediaLink">
+						<img class="FooterSocialMediaImageSize" alt="twitter sharing button" src="https://platform-cdn.sharethis.com/img/twitter.svg">
 					</a>
 
-					<a class="st-btn" data-network="instagram" id="FooterMediaLink">
-						<img class="MediaImageSize" alt="twitter sharing button" src="https://platform-cdn.sharethis.com/img/twitter.svg">
-					</a>
-
-					<a class="st-btn" data-network="instagram" id="FooterMediaLink">
-						<img class="MediaImageSize" alt="instagram sharing button" src="https://platform-cdn.sharethis.com/img/instagram.svg">
+					<a class="st-btn" data-network="instagram" href="https://www.instagram.com/" id="FooterSocialMediaLink">
+						<img class="FooterSocialMediaImageSize" alt="instagram sharing button" src="https://platform-cdn.sharethis.com/img/instagram.svg">
 					</a>
 				</div>
 
-				<div class="col-lg-3 col-md-3 col-sm-2" id="OurServicesContainerFooter">
+				<div class="col-lg-3 col-md-3 col-xs-3">
 					<h3 class="AboutUsHeader"> <b> Our Services </b> </h3>
 					<ul class="OurServicesContentContainer">
-						<li class="OurServiceFooterContent">Lorem ipsum Lorem ipsum</li>
-						<li class="OurServiceFooterContent">Lorem ipsum Lorem ipsum</li>
-						<li class="OurServiceFooterContent">Lorem ipsum Lorem ipsum</li>
-						<li class="OurServiceFooterContent">Lorem ipsum Lorem ipsum</li>
+						<li class="OurServiceFooterContent">
+							<a class="OurServiceFooterHeader" href="Offshoredevelopment.html">Offshore development</a>
+							<!--Lorem ipsum Lorem ipsum-->
+						</li>
+						<li class="OurServiceFooterContent">
+							<a class="OurServiceFooterHeader" href="Outsourcing.html">Out sourcing</a>
+						</li>
+						<li class="OurServiceFooterContent">
+							<a class="OurServiceFooterHeader" href="QualityAssurance&Testing.html">Quality Assurance</a>
+						</li>
+						<li class="OurServiceFooterContent">
+							<a class="OurServiceFooterHeader" href="SoftwareSolutions.html">Software Solutions</a>
+						</li>
+						<li class="OurServiceFooterContent">
+							<a class="OurServiceFooterHeader" href="TurnkeySolutions.html">Turnkey Solutions</a>
+						</li>
+						<li class="OurServiceFooterContent">
+							<a class="OurServiceFooterHeader" href="WebSolutions.html">Web Solutions</a>
+						</li>
 					</ul>
 				</div>
 
-				<div class="col-lg-3 col-md-2 col-sm-1" id="ContactUsContainerFooter">
+				<div class="col-lg-3 col-md-3 col-xs-3">
 					<h3 class="AboutUsHeader"> <b> Contact Us </b> </h3>
 					<ul class="Phone">
 						<li class="FooterContent">Mobile:</li>
-						<li class="FooterContentOne">+20 011234567890</li>
+						<li class="FooterContentOne">+201001612287</li>
+						<li class="FooterContentOne">+201099300816</li>
 
 						<li class="FooterContent">Telephone:</li>
-						<li class="FooterContentTwo">+20 23456789</li>
+						<li class="FooterContentTwo">+2 025648201</li>
 
 						<li class="FooterContent">Email:</li>
-						<li class="FooterContentThree">Lorem ipsum@gmail.com</li>
+						<li class="FooterContentThree">Info@arabdt.com</li>
 
 						<li class="FooterContent">Address:</li>
-						<li class="FooterContentFour">Lorem ipsum Lorem ipsum</li>
+						<li class="FooterContentFour">5th District, New Cairo, Cairo,Egypt</li>
 					</ul>
 				</div>
 
-				<div class="col-lg-1 col-md-1 col-sm-1" id="UPSection">
-					<img class="UPImageSize" alt="googleplus sharing button" src="images/UP.png">
+				<div class="col-lg-12 col-md-12 col-xs-12">
+					<p class="copyright-text"> ArabDT Copyrights © 2020 </p>
 				</div>
 			</div>
 
-			<div class="row">
+			<div class="row" id="SecondFooter">
+				<div class="col-md-6 col-xs-12">
+					<img class="img-fluid" id="LogoPicture" src="images/Logo.png" alt="alternative">
+				</div>
 
-				<!-- <div class="col-lg-2 col-md-1" id="PictureOfAboutUs">
-					<img class="card-image" id="StyleOfAboutUsPicture" src="images/Logo.png" alt="alternative">
-					<div class="col-lg-2" id="PictureOfAboutUs">
-						<img class="card-image" id="StyleOfAboutUsPicture" src="images/Logo.png" alt="alternative">
-					</div>
-					<div class="footer-col last">
-						<div class="row">
-							<div class="col-lg-2" id="PictureOfAboutUs">
-								<img class="card-image" id="StyleOfAboutUsPicture" src="images/Logo.png" alt="alternative">
-							</div>
-						</div>
-					</div>
-				</div> -->
-				<!-- <div class="col-lg-3 col-md-1">
-					<div class="row">
-						<div class="col-lg-12">
-							<h3 class="AboutUsHeader"><b>About Us</b></h3>
-						</div>
+				<div class="col-md-6 col-xs-12" id="SectionContactUs">
+					<h3 class="FooterHeaderAboutUs"> <b> Contact Us </b> </h3>
+					<ul class="FooterPhone">
+						<li class="FooterContentBody">Mobile:</li>
+						<li class="FooterContentOneSection">+201001612287</li>
+						<li class="FooterContentOneSection">+201099300816</li>
 
-						<div class="col-lg-12" id="ContentFooterMarginBottom">
-							<ul class="ContentOfAboutUsSection">
-								<li class="FooterContent">
-									Lorem ipsum dolor sit amet, consectetuer
-									adipiscing elit, sed diam nonummy nibh
-									euismod tincidunt ut laoreet dolore magna
-									aliquam erat volutpat. Ut wisi enim ad minim
-									veniam, quis nostrud exerci tation ullam
-								</li>
-							</ul>
-						</div>
+						<li class="FooterContentBody">Telephone:</li>
+						<li class="FooterContentTwoSection">+2 025648201</li>
 
-						<div class="col-lg-12">
-							<div class="mb-5 flex-center">
-								<a class="st-btn" data-network="googleplus" id="FooterMediaLink">
-									<img class="MediaImageSize" alt="googleplus sharing button" src="https://platform-cdn.sharethis.com/img/googleplus.svg">
-								</a>
+						<li class="FooterContentBody">Email:</li>
+						<li class="FooterContentThreeSection">Info@arabdt.com</li>
 
-								<a class="st-btn st-first" data-network="facebook" id="FooterMediaLink">
-									<img class="MediaImageSize" alt="facebook sharing button" src="https://platform-cdn.sharethis.com/img/facebook.svg">
-								</a>
+						<li class="FooterContentBody">Address:</li>
+						<li class="FooterContentFourSection">5th District, New Cairo, Cairo,Egypt</li>
+					</ul>
+				</div>
 
-								<a class="st-btn" data-network="linkedin" id="FooterMediaLink">
-									<img class="MediaImageSize" alt="linkedin sharing button" src="https://platform-cdn.sharethis.com/img/linkedin.svg">
-								</a>
-
-								<a class="st-btn" data-network="instagram" id="FooterMediaLink">
-									<img class="MediaImageSize" alt="twitter sharing button" src="https://platform-cdn.sharethis.com/img/twitter.svg">
-								</a>
-
-								<a class="st-btn" data-network="instagram" id="FooterMediaLink">
-									<img class="MediaImageSize" alt="instagram sharing button" src="https://platform-cdn.sharethis.com/img/instagram.svg">
-								</a>
-							</div>
-						</div>
-					</div>
-				</div> -->
-				<!-- <div class="col-lg-3">
-					<div class="footer-col last">
-						<div class="row">
-							<div class="col-lg-10">
-								<h3 class="AboutUsHeader">Our Services</h3>
-								<ul class="Phone">
-									<li class="FooterContent">Lorem ipsum Lorem ipsum</li>
-									<li class="FooterContent">Lorem ipsum Lorem ipsum</li>
-									<li class="FooterContent">Lorem ipsum Lorem ipsum</li>
-									<li class="FooterContent">Lorem ipsum Lorem ipsum</li>
-								</ul>
-							</div>
-
-						</div>
-					</div>
-				</div> -->
-				<!-- <div class="col-lg-3">
-					<div class="footer-col last">
-						<div class="row">
-							<div class="col-lg-10">
-								<h3 class="AboutUsHeader">Contact Us</h3>
-								<ul class="Phone">
-									<li class="FooterContent">Mobile:</li>
-									<li class="FooterContent">+20 011234567890</li>
-
-									<li class="FooterContent">Telephone:</li>
-									<li class="FooterContent">+20 23456789</li>
-
-									<li class="FooterContent">Email:</li>
-									<li class="FooterContent">Lorem ipsum@gmail.com</li>
-
-									<li class="FooterContent">Address:</li>
-									<li class="FooterContent">Lorem ipsum Lorem ipsum</li>
-								</ul>
-							</div>
-
-						</div>
-					</div>
-				</div> -->
-				<!-- <div class="col-lg-1" id="UPSection">
-					<a class="st-btn" data-network="googleplus" href="#top">
-						<img class="UPImageSize" alt="googleplus sharing button" src="images/UP.png">
+				<div class="col-md-6 col-xs-12" id="MediaSocial">
+					<a class="st-btn" data-network="linkedin" href="https://www.linkedin.com/" id="FooterSocialMediaLink">
+						<img class="FooterSocialMediaImageSize" alt="linkedin sharing button" src="https://platform-cdn.sharethis.com/img/linkedin.svg">
 					</a>
-				</div> -->
+
+					<a class="st-btn st-first" data-network="facebook" href="https://www.facebook.com/" id="FooterSocialMediaLink">
+						<img class="FooterSocialMediaImageSize" alt="facebook sharing button" src="https://platform-cdn.sharethis.com/img/facebook.svg">
+					</a>
+
+					<a class="st-btn" data-network="twitter" href="https://www.twitter.com/" id="FooterSocialMediaLink">
+						<img class="FooterSocialMediaImageSize" alt="twitter sharing button" src="https://platform-cdn.sharethis.com/img/twitter.svg">
+					</a>
+
+					<a class="st-btn" data-network="instagram" href="https://www.instagram.com/" id="FooterSocialMediaLink">
+						<img class="FooterSocialMediaImageSize" alt="instagram sharing button" src="https://platform-cdn.sharethis.com/img/instagram.svg">
+					</a>
+				</div>
+
+				<p class="copyright_text" id="CopyRight"> ArabDT Copyrights © 2020 </p>
 			</div>
 
-			<p class="copyright-text">ArabDT Copyright 2020 </p>
+			<div class="container" id="ButtonFooterUp">
+				<div class="UpFooter" id="UPSection">
+					<a href="#top" id="button">
+					</a>
+
+					<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+					<script>
+						var btn = $('#button');
+
+						$(window).scroll(function () {
+							if ($(window).scrollTop() > 300) {
+								btn.addClass('show');
+							} else {
+								btn.removeClass('show');
+							}
+						});
+
+						btn.on('click', function (e) {
+							e.preventDefault();
+							$('html, body').animate({ scrollTop: 0 }, '300');
+						});
+					</script>
+				</div>
+			</div>
 		</div>
-	</div> <!-- Footer -->
+	</div>
+
 	<!-- Scripts -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery-migrate-1.2.1.min.js"></script>
 	<script src="js/min/plugins.min.js"></script>
 	<script src="js/min/medigo-custom.min.js"></script>
 </body>

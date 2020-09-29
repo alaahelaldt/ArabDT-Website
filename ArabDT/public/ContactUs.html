@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<title>ArabDT</title>
+		<title>ArabDT - Contact Us</title>
 		<meta name="keywords" content="">
 		<meta name="description" content="">
 		<meta name="author" content="templatemo">
@@ -21,77 +21,132 @@
 		<link rel="stylesheet" href="css/misc.css">
 		<link rel="stylesheet" href="css/red-scheme.css">
 	
-		<!-- JavaScripts -->
-		<script src="js/jquery-1.10.2.min.js"></script>
-		<script src="js/jquery-migrate-1.2.1.min.js"></script>
-		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
-
 		<link rel="shortcut icon" href="images/ArabIcon.ico" type="image/x-icon" />
 
 	</head>
 	<body class="ContactUsBody">
-		<div class="responsive_menu">
+		<div class="responsive_menu" id="MenuResponsive">
 			<ul class="main_menu">
-				<li><a href="index.html">Home</a></li>
-				<li class="active"><a href="AboutUs.html">About Us</a></li>
-				<li>
-					<a href="Services.html">Our Services</a>
-					<ul>
-						<li><a href="portfolio.html">Portfolio Grid</a></li>
-						<li><a href="project-image.html">Project Image</a></li>
-						<li><a href="project-slideshow.html">Project Slideshow</a></li>
-					</ul>
+				<li class="IndexPage"><a class="IndexLink" href="index.html">Home</a></li>
+				<li class="IndexPage"><a class="IndexLink" href="AboutUs.html">About Us</a></li>
+				<li class="IndexPage">
+					<div class="dropdown">
+						<a class="IndexLink" href="OurServices.html">Our Services</a>
+						<i class="IndexLink dropbtn fa fa-chevron-down" onclick="myFunction();"></i>
+
+						<div id="myServiceDropdown" class="dropdown-content">
+							<a class="ServiceBorder IndexLinkDropDown" href="Offshoredevelopment.html">Offshore development</a>
+							<a class="ServiceBorder IndexLinkDropDown" href="Outsourcing.html">Out sourcing</a>
+							<a class="ServiceBorder IndexLinkDropDown" href="QualityAssurance&Testing.html">Quality Assurance</a>
+							<a class="ServiceBorder IndexLinkDropDown" href="SoftwareSolutions.html">Software Solutions</a>
+							<a class="ServiceBorder IndexLinkDropDown" href="TurnkeySolutions.html">Turnkey Solutions</a>
+							<a class="ServiceBorder IndexLinkDropDown" href="WebSolutions.html">Web Solutions</a>
+						</div>
+
+
+					</div>
+					<script>
+						/* When the user clicks on the button,
+						toggle between hiding and showing the dropdown content */
+						function myFunction() {
+							document.getElementById("myServiceDropdown").classList.toggle("show");
+						}
+
+						// Close the dropdown if the user clicks outside of it
+						window.onclick = function (event) {
+							if (!event.target.matches('#ServiceDown')) {
+								var dropdowns = document.getElementsByClassName("dropdown-content");
+								var i;
+								for (i = 0; i < dropdowns.length; i++) {
+									var openDropdown = dropdowns[i];
+									if (openDropdown.classList.contains('show')) {
+										openDropdown.classList.remove('show');
+									}
+								}
+							}
+						}
+					</script>
 				</li>
-				<li><a href="index.html">Careers</a></li>
-				<li><a href="ContactUs.html">Contact Us</a></li>
-				<li>
-					<a href="EN.html">EN</a>
-					<ul>
-						<li><a href="blog.html">Blog Standard</a></li>
-						<li><a href="blog-single.html">Blog Single</a></li>
-						<li><a href="#">visit templatemo</a></li>
-					</ul>
+				<li class="IndexPage"><a class="IndexLink" href="Career.html">Careers</a></li>
+				<li class="active IndexPage"><a class="IndexLink" href="ContactUs.html">Contact Us</a></li>
+				<li class="IndexPage">
+					<div class="dropdown">
+						<a class="IndexLink" href="index.html">EN</a>
+						<i class="IndexLink dropbtn fa fa-chevron-down" onclick="myEnFunction();"></i>
+
+						<div id="myEnDropdown" class="dropdown-content">
+							<a class="ServiceBorder IndexLinkDropDown" href="index.html">English</a>
+							<a class="ServiceBorder IndexLinkDropDown" href="index.html">Arabic</a>
+						</div>
+
+					</div>
+
+					<script>
+						function myEnFunction() {
+							document.getElementById("myEnDropdown").classList.toggle("show");
+						}
+
+						window.onclick = function (event) {
+							if (!event.target.matches('#EnDown')) {
+								var Endropdowns = document.getElementById("myEnDropdown");
+								var i;
+								for (i = 0; i < Endropdowns.length; i++) {
+									var OpenDropdown = Endropdowns[i];
+									if (OpenDropdown.classList.contains('show')) {
+										OpenDropdown.classList.remove('show');
+									}
+								}
+							}
+						}
+					</script>
 				</li>
 			</ul>
 		</div>
 
 		<header class="site-header clearfix" name="top">
-			<div class="container">
-				<div class="row">
+			<div class="container" id="NavBarContainer">
+				<div class="row" id="NavBarRow">
 					<div class="col-md-12">
 						<div class="pull-left logo">
-							<a href="..\ArabDT\HomePage.html">
-								<img src="images/Logo.png" alt="ArabDT by templatemo">
+							<a href="index.html">
+								<img class="img-fluid" id="WebsiteLogo" src="images/Logo.png" alt="ArabDT by templatemo">
 							</a>
 						</div>
 
 						<div class="main-navigation pull-right">
 							<nav class="main-nav visible-md visible-lg">
-								<ul class="sf-menu" id="NavBarHeader">
-									<li><a href="..\ArabDT\HomePage.html">Home</a></li>
-									<li><a href="..\ArabDT\AboutUs.html">About Us</a></li>
-									<li>
-										<a href="..\ArabDT\OurServices.html">Our Services</a>
+								<ul class="sf-menu" id="NavBarContactUsHeader">
+									<li id="AboutUsNavBar"><a id="DivOfAllHome" href="index.html">Home</a></li>
+									<li id="AboutUsNavBar"><a id="DivOfAllAboutUs" href="AboutUs.html">About Us</a></li>
+									<li id="AboutUsNavBar">
+										<a id="DivOfAllOurServices" href="OurServices.html">Our Services</a>
 										<ul>
-											<li><a class="ServiceDetailsFontHeader" href="..\ArabDT\ServiceDetails.html">Lorem ipsum</a></li>
-											<li><a class="ServiceDetailsFontHeader" href="..\ArabDT\ServiceDetails.html">Lorem ipsum</a></li>
-											<li><a class="ServiceDetailsFontHeader" href="..\ArabDT\ServiceDetails.html">Lorem ipsum</a></li>
+											<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="Offshoredevelopment.html">Offshore development</a></li>
+											<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="Outsourcing.html">Out sourcing</a></li>
+											<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="QualityAssurance&Testing.html">Quality Assurance</a></li>
+											<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="SoftwareSolutions.html">Software Solutions</a></li>
+											<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="TurnkeySolutions.html">Turnkey Solutions</a></li>
+											<li class="ServiceDetailsHeader"><a class="ServiceDetailsFontHeader" href="WebSolutions.html">Web Solutions</a></li>
 										</ul>
 									</li>
-									<li><a href="..\ArabDT\Careers.html">Careers</a></li>
-									<li class="active"><a href="..\ArabDT\ContactUs.html">Contact Us</a></li>
-									<li>
-										<a href="..\ArabDT\EN.html">EN</a>
-										<ul>
-											<li><a href="blog.html"> Arabic </a></li>
-											<li><a href="blog-single.html"> English </a></li>
+									<li id="AboutUsNavBar"><a id="DivOfAllCareer" href="Career.html">Careers</a></li>
+									<li id="AboutUsNavBar" class="active">
+										<a href="ContactUs.html">Contact Us</a>
+										<div id="mainDivContactUs">
+										</div>
+									</li>
+									<li id="AboutUsNavBar">
+										<a id="DivOfAllLanguage" href="index.html">EN</a>
+										<ul id="SectionOfLanguage">
+											<li id="LanguageSection" class="ServiceDetailsHeader"><a href="index.html"> Arabic </a></li>
+											<li id="LanguageSection" class="ServiceDetailsHeader"><a href="index.html"> English </a></li>
 										</ul>
 									</li>
 								</ul>
 
 								<script>
 									$(document).ready(function () {
-                                        $('sf-menu li a').click(function () {
+										$('sf-menu li a').click(function () {
 											$('li a').removeClass("active");
 											$(this).addClass("active");
 										});
@@ -114,458 +169,373 @@
 			</div>
 		</header> <!-- Header -->
 
-		<header id="header" class="header">
-			<div class="header-content">
-				<div class="container">
+		<div class="container">
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<div id="ContactUsSectionPicture">
+					<img class="img-fluid" id="ContactUsPicture" src="images/MainTelephone.png" alt="alternative" />
+				</div>
+
+				<div id="SecondSectionOfContactUsPicture">
+					<h1 class="ContactUsHeader"> <b class="ContactUsHeaderContent">CONTACT</b> </h1>
+				</div>
+
+				<div class="col-lg-12 col-md-12 col-xs-12">
+					<div class="col-lg-2 col-md-2">
+
+					</div>
+
+					<div class="col-lg-10 col-md-12 col-xs-12">
+						<div class="col-lg-5 col-md-6 col-xs-6">
+							<div class="ContactUsBox">
+								<img class="img-fluid" id="PhoneContactUsImage" src="images/Phone.png" alt="alternative">
+								<div id="ContactUsContentBody">
+									<h4 class="ContactUsFirstPhoneContent">+201001612287 </h4>
+									<h4 class="ContactUsSecondPhoneContent">+201099300816 </h4>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-lg-5 col-md-6 col-xs-6">
+							<div class="ContactUsBox">
+								<img class="img-fluid" id="TelephoneContactUsImage" src="images/Telephone.png" alt="alternative">
+								<div id="ContactUsContentBody">
+									<h4 class="ContactUsFirstTelephoneContent">+2 025648201</h4>
+									<!--<h4 class="ContactUsSecondTelephoneContent">+20 23456789</h4>-->
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-lg-5 col-md-6 col-xs-6">
+							<div class="ContactUsBox">
+								<img class="img-fluid" id="LocationContactUsImage" src="images/Location.png" alt="alternative">
+								<div id="ContactUsContentBody">
+									<h4 class="ContactUsFirstLocationContent">5th District, New Cairo, Cairo,Egypt</h4>
+									<!--<h4 class="ContactUsSecondLocationContent">Lorem ipsum Lorem ipsum</h4>-->
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-lg-5 col-md-6 col-xs-6">
+							<div class="ContactUsBox">
+								<img class="img-fluid" id="MessageContactUsImage" src="images/Message.png" alt="alternative">
+								<div id="ContactUsContentBody">
+									<h4 class="ContactUsMessageContentBody">Lorem ipsum@gmail.com</h4>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-12  col-md-12 col-xs-12" id="MediaContainer">
 					<div class="row">
-						<div class="col-lg-12 text-center">
-							<div class="text-container">
-								<img class="ContactUsPicture" src="images/MainTelephone.png" alt="alternative" />
+						<div class="mb-5 flex-center">
+							<a class="st-btn" data-network="linkedin" href="https://www.linkedin.com/" id="MediaLink">
+								<img class="SectionMediaImage" alt="linkedin sharing button" src="https://platform-cdn.sharethis.com/img/linkedin.svg">
+							</a>
+
+							<a class="st-btn st-first" data-network="facebook" href="https://www.facebook.com/" id="MediaLink">
+								<img class="SectionMediaImage" alt="facebook sharing button" src="https://platform-cdn.sharethis.com/img/facebook.svg">
+							</a>
+
+							<a class="st-btn" data-network="twitter" href="https://www.twitter.com/" id="MediaLink">
+								<img class="SectionMediaImage" alt="twitter sharing button" src="https://platform-cdn.sharethis.com/img/twitter.svg">
+							</a>
+
+							<a class="st-btn" data-network="instagram" href="https://www.instagram.com/" id="MediaLink">
+								<img class="InstagramSectionMediaImage" alt="instagram sharing button" src="https://platform-cdn.sharethis.com/img/instagram.svg">
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<h1 class="ContainerApply"> <b class="Apply">APPLY HERE</b> </h1>
+				</div>
+
+				<div>
+					<div class="col-lg-12 col-md-12 col-xs-12 text-center" id="ApplyContainerDiv">
+						<div class="main-agileinfo">
+							<div class="agileits-top">
+								<form class="needs-validation" id="CareerForm" enctype="multipart/form-data" novalidate action=" " method="post">
+									<div class="row">
+										<div class="col-lg-6" id="MobileLabel">
+											<label class="FormHeader"> First Name </label>
+											<input class="FirstName" id="FirstNameInput" type="text" name="First Name" required>
+											<div class="invalid-feedback" id="ErrorMessageCareerFirstName">Please Enter your First Name.</div>
+
+										</div>
+										<div class="col-lg-6" id="MobileLabel">
+											<label class="FormHeader"> Last Name </label>
+											<input class="LastName" id="LastNameInput" type="text" name="Last Name" required>
+											<div class="invalid-feedback" id="ErrorMessageCareerLastName">Please Enter your LastName.</div>
+
+										</div>
+
+										<div class="col-lg-12" id="MobileLabel">
+											<label class="FormHeader"> Mobile </label>
+										</div>
+
+										<div class="col-lg-6" id="MobileLabel">
+											<input class="Mobile" id="MobileInput" type="number" name="Mobile" maxlength="11" minlength="11" required>
+											<div class="invalid-feedback" id="ErrorMessageCareerMobile">Please Enter a valid Mobile.</div>
+
+										</div>
+										<div class="col-lg-6" id="MobileLabel">
+											<input class="AnotherMobile" id="AnotherMobileInput" type="number" name="Mobile" maxlength="11" minlength="11">
+											<div class="invalid-feedback" id="ErrorMessageCareerMobile">Please Enter a valid Mobile.</div>
+
+										</div>
+
+										<div class="col-lg-8" id="MobileLabel">
+											<label class="FormHeader"> E-mail Address </label>
+											<input class="EmailAddress" id="ToEmail" type="email" name="Email" size="30" required>
+											<div class="invalid-feedback" id="ErrorMessageCareerEmail">Please Enter a valid Email.</div>
+
+										</div>
+
+										<div class="col-lg-12" id="MobileLabel">
+											<label class="FormHeader"> Description </label>
+											<div id="DescriptionContainer">
+												<textarea class="text email" id="Description" name="Description" required=""></textarea>
+												<div class="invalid-feedback" id="ErrorMessageCareerDescription">Please Enter a valid Description.</div>
+
+											</div>
+										</div>
+									</div>
+
+									<input class="ContainerApplySectionSubmit" type="submit" value="SUBMIT" onclick="sendEmail()">
+
+									<script src="https://smtpjs.com/v3/smtp.js"></script>
+									<script src="https://smtpjs.com/smtp.js"></script>
+									<script>
+										var GetFile;
+
+										function myFunction() {
+											//alert("Hello");
+											var x = document.getElementById("upload-photo");
+
+											//const filenameList = Array.prototype.map.call(x.files, function (file)
+											//{
+											//	return file.name
+											//})
+
+											//alert(x.files[0].url)
+
+											var Data = $('#upload-photo').val();
+											if ('files' in x) {
+												for (var i = 0; i < x.files.length; i++) {
+													var file = x.files[i];
+													document.getElementById("UploadFile").value = file.name;
+													//alert(GetFile)
+												}
+											}
+										}
+
+										(function () {
+											'use strict';
+											window.addEventListener('load', function () {
+												var forms = document.getElementsByClassName('needs-validation');
+												var validation = Array.prototype.filter.call(forms, function (form) {
+													form.addEventListener('submit', function (event) {
+														if (form.checkValidity() === false) {
+															event.preventDefault();
+															event.stopPropagation();
+														}
+														form.classList.add('was-validated');
+													}, false);
+												});
+											}, false);
+										})();
+
+										function sendEmail() {
+											//alert($('#upload-photo').val());
+											//alert(GetFile);
+											Email.send({
+												SecureToken: "006ee01-879a-4632-898a-d3685cb28e88 ",
+												To: "ma7moudzakaria96@outlook.com",
+												From: "mzakaria@arabdt.com",
+												Subject: "New Job",
+												Body: document.getElementById('Description').value
+											}).then(
+												//alert("WE Finished")
+											);
+
+										}
+									</script>
+								</form>
 							</div>
 						</div>
 					</div>
 				</div>
+
 			</div>
-		</header> <!-- Arab Picture -->
-
-		<header id="AboutUsContent" class="header">
-			<div class="header-content">
-				<div class="container">
-					<div class="col-lg-12 text-center">
-						<div class="col-lg-2">
-						</div>
-
-						<div class="col-lg-8" id="ContactContainer">
-							<div class="text-container">
-								<h1> <b class="Contact">CONTACT</b> </h1>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-12 text-center">
-						<div class="col-lg-2">
-
-						</div>
-
-						<div class="col-lg-10 col-md-4 col-sm-4  text-center">
-							<div class="ContactCard">
-
-								<div class="col-lg-5 col-md-2">
-									<div class="ContactUsBox">
-										<img class="PhoneContactUsImage" src="images/Phone.png" alt="alternative">
-										<div id="ContactUsContentBody">
-											<h4 class="ContactUsPhoneContent">+20 01234567890 </h4>
-											<h4 class="ContactUsPhoneContent">+20 01234567890 </h4>
-										</div>
-									</div>
-
-								</div>
-
-								<div class="col-lg-5 col-md-2  text-center">
-									<div class="ContactUsBox">
-										<img class="TelephoneContactUsImage" src="images/Telephone.png" alt="alternative">
-										<div id="ContactUsContentBody">
-											<h4 class="ContactUsTelephoneContent">+20 23456789</h4>
-											<h4 class="ContactUsTelephoneContent">+20 23456789</h4>
-										</div>
-									</div>
-
-								</div>
-
-								<div class="col-lg-5 col-md-2  text-center">
-									<div class="ContactUsBox">
-										<img class="LocationContactUsImage" src="images/Location.png" alt="alternative">
-										<div id="ContactUsContentBody">
-											<h4 class="ContactUsLocationContent">Lorem ipsum Lorem ipsum</h4>
-											<h4 class="ContactUsLocationContent">Lorem ipsum Lorem ipsum</h4>
-										</div>
-									</div>
-
-								</div>
-
-								<div class="col-lg-5 col-md-2  text-center">
-									<div class="ContactUsBox">
-										<img class="MessageContactUsImage" src="images/Message.png" alt="alternative">
-										<div id="ContactUsContentBody">
-											<h4 class="ContactUsMessageContentBody">Lorem ipsum@gmail.com</h4>
-										</div>
-									</div>
-
-								</div>
-
-							</div> <!-- About Us Boxes -->
-						</div>
-					</div>
-
-					<div class="col-lg-12 text-center">
-						<div class="container">
-							<div class="col-lg-2">
-
-							</div>
-
-							<div class="col-lg-6 col-md-6  text-center" id="MediaContainer">
-								<div class="row">
-									<div class="mb-5 flex-center">
-										<a class="st-btn" data-network="googleplus" id="MediaLink">
-											<img class="SectionMediaImage" alt="googleplus sharing button" src="https://platform-cdn.sharethis.com/img/googleplus.svg">
-										</a>
-
-										<a class="st-btn st-first" data-network="facebook" id="MediaLink">
-											<img class="SectionMediaImage" alt="facebook sharing button" src="https://platform-cdn.sharethis.com/img/facebook.svg">
-										</a>
-
-										<a class="st-btn" data-network="linkedin" id="MediaLink">
-											<img class="SectionMediaImage" alt="linkedin sharing button" src="https://platform-cdn.sharethis.com/img/linkedin.svg">
-										</a>
-
-										<a class="st-btn" data-network="instagram" id="MediaLink">
-											<img class="SectionMediaImage" alt="twitter sharing button" src="https://platform-cdn.sharethis.com/img/twitter.svg">
-										</a>
-
-										<a class="st-btn" data-network="instagram" id="MediaLink">
-											<img class="SectionMediaImage" alt="instagram sharing button" src="https://platform-cdn.sharethis.com/img/instagram.svg">
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header> <!-- About Us Content -->
-
-		<header id="GetInTouchContent" class="header">
-			<div class="header-content">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 text-center">
-							<div class="col-lg-2">
-							</div>
-
-							<div class="col-lg-8" id="ContactContainer">
-								<div class="text-container">
-									<h1> <b class="Contact">GET IN TOUCH</b> </h1>
-								</div>
-							</div>
-
-							<div class="col-lg-2">
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-lg-1">
-						</div>
-
-						<div class="col-lg-10 text-center">
-							<div class="main-agileinfo">
-								<div class="agileits-top">
-									<form class="sendEmail" action="#" method="post">
-										<div class="row">
-											<div class="col-lg-6">
-												<h2 class="FormHeader"> First Name </h2>
-												<input class="FirstName" id="FirstNameInput"  type="text" name="First Name" required="">
-											</div>
-											<div class="col-lg-6">
-												<h2 class="FormHeader"> Last Name </h2>
-												<input class="LastName" id="LastNameInput" type="text" name="Last Name" required="">
-											</div>
-
-											<div class="col-lg-12">
-												<h2 class="FormHeader"> Mobile </h2>
-											</div>
-
-											<div class="col-lg-6">
-												<input class="Mobile" id="MobileInput" type="text" name="Mobile" required="">
-											</div>
-											<div class="col-lg-6">
-												<input class="AnotherMobile" id="AnotherMobileInput" type="text" name="Mobile" required="">
-											</div>
-
-											<div class="col-lg-8">
-												<h2 class="FormHeader"> E-mail Address </h2>
-												<input class="EmailAddress" id="ToEmail" type="email" name="Email" required="">
-											</div>
-
-											<div class="col-lg-8">
-												<h2 class="FormHeader"> Service </h2>
-												<input class="Service" id="ServiceInput" type="text" name="Service" required="">
-											</div>
-
-											<div class="col-lg-12">
-												<h2 class="FormHeader"> Description </h2>
-												<div id="DescriptionContainer">
-													<textarea class="text email" id="Description" name="Description" required=""></textarea>
-												</div>
-											</div>
-										</div>
-
-										<input class="ContainerSectionSubmit" type="submit" value="Submit" onsubmit="sendEmail()">
-
-										<script src="https://smtpjs.com/v3/smtp.js">
-										</script>
-										<script>
-
-											$(".sendEmail").submit(function (e) {
-												
-                                                var link = "mailto:" + document.getElementById('ToEmail').value
-                                                    + "?cc=ma7moudzakaria96@outlook.com"
-                                                    + "&subject=" + encodeURIComponent("This is my subject")
-                                                    + "&body=" + encodeURIComponent(document.getElementById('Description').value)
-                                                    ;
-
-                                                window.location.href = link;
-
-												//alert("First Header Mahmoud");
-
-            //                                    Email.send({
-            //                                        Host: "smtp.gmail.com",
-            //                                        Username: "<sender’s email address>",
-            //                                        Password: "<email password>",
-            //                                        To: document.getElementById('ToEmail').value,
-            //                                        From: "ma7moudzakaria96@outlook.com",
-            //                                        Subject: "Hello",
-            //                                        Body: document.getElementById('Description').value,
-            //                                    }).then(
-            //                                        message => alert("mail sent successfully")
-            //                                    );
-
-												//Email.send({
-            //                                        Host: "smtp.elasticemail.com",
-            //                                        Username: "mzakaria@arabdt.com",
-            //                                        Password: "61453370E4D59025ED9301B6826A8ED3A554",
-            //                                        To: 'mzakaria@arabdt.com',
-            //                                        From: "you@isp.com",
-            //                                        Subject: "This is the subject",
-            //                                        Body: "And this is the body"
-            //                                    }).then(
-            //                                        message => alert(message)
-            //                                    );
-
-                                                //Email.send({
-                                                //    Host: "smtp.yourisp.com",
-                                                //    Username: "username",
-                                                //    Password: "password",
-                                                //    To: 'mzakaria@arabdt.com',
-                                                //    From: "you@isp.com",
-                                                //    Subject: "This is the subject",
-                                                //    Body: "And this is the body"
-                                                //}).then(
-                                                //    message => alert(message)
-                                                //);
-
-                                                //Email.send({
-                                                //    Host: "smtp.yourisp.com",
-                                                //    Username: "Ma7moud",
-                                                //    Password: "Mahmoud1996",
-                                                //    To: document.getElementById('ToEmail').value,
-                                                //    From: "ma7moudzakaria96@outlook.com",
-                                                //    Subject: "Welcome From ArabDT",
-                                                //    Body: document.getElementById('Description').value
-                                                //}).then(
-                                                //    message => alert(message)
-                                                //);
-												//alert("Second Header Mahmoud");
-											});
-										</script>
-									</form>
-								</div>
-							</div>
-
-							<div class="col-lg-1">
-							</div>
-
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</header> <!-- GET IN TOUCH -->
-
-		<div class="MapContainer">
-			<img class="MapPicture" src="images/Map.png" alt="Map" />
 		</div>
 
-		<div class="footer" id="MainSectionOfFooter">
-			<div class="container">
-				<div class="col-lg-12 col-md-6 col-sm-4">
-					<div class="col-lg-2 col-md-3 col-sm-2" id="PictureOfAboutUs">
-						<img class="card-image" id="StyleOfAboutUsPicture" src="images/Logo.png" alt="alternative">
+		<div id="MapContainer" class="z-depth-1-half map-container">
+			<iframe class="MapFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6909.645047548874!2d31.43170541504178!3d30.013252031893664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583d165c162839%3A0x2d85097a10e0dc11!2sArabDT%20%22Arab%20Digital%20Transformations%22!5e0!3m2!1sen!2seg!4v1599158219624!5m2!1sen!2seg" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		</div>
+
+		<div class="container p-3 my-3">
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<div class="row" id="FirstFooter">
+					<div class="col-lg-3 col-md-3 col-xs-3">
+						<img class="img-fluid" id="LogoPicture" src="images/Logo.png" alt="alternative">
 					</div>
 
-					<div class="col-lg-3 col-md-3 col-sm-2" id="AboutUsContainerFooter">
-						<h3 class="AboutUsHeader"><b>About Us</b></h3>
+					<div class="col-lg-3 col-md-3 col-xs-3" id="SectionOfAboutUsAndSocialMedia">
+						<h3 class="FooterAboutUsHeader"><b>About Us</b></h3>
 
-						<p class="AboutUsFooterContent">
-							Lorem ipsum dolor sit amet, consectetuer
-							adipiscing elit, sed diam nonummy nibh
-							euismod tincidunt ut laoreet dolore magna
-							aliquam erat volutpat. Ut wisi enim ad minim
-							veniam, quis nostrud exerci tation ullam
+						<p class="FooterContentAboutUs">
+							ArabDT, is an Egyptian company, specialized in information technology services, consulting, and business process outsourcing.
 						</p>
 
-						<a class="st-btn" data-network="googleplus" id="FooterMediaLink">
-							<img class="MediaImageSize" alt="googleplus sharing button" src="https://platform-cdn.sharethis.com/img/googleplus.svg">
+						<a class="st-btn" data-network="linkedin" href="https://www.linkedin.com/" id="FooterSocialMediaLink">
+							<img class="FooterSocialMediaImageSize" alt="linkedin sharing button" src="https://platform-cdn.sharethis.com/img/linkedin.svg">
 						</a>
 
-						<a class="st-btn st-first" data-network="facebook" id="FooterMediaLink">
-							<img class="MediaImageSize" alt="facebook sharing button" src="https://platform-cdn.sharethis.com/img/facebook.svg">
+						<a class="st-btn st-first" data-network="facebook" href="https://www.facebook.com/" id="FooterSocialMediaLink">
+							<img class="FooterSocialMediaImageSize" alt="facebook sharing button" src="https://platform-cdn.sharethis.com/img/facebook.svg">
 						</a>
 
-						<a class="st-btn" data-network="linkedin" id="FooterMediaLink">
-							<img class="MediaImageSize" alt="linkedin sharing button" src="https://platform-cdn.sharethis.com/img/linkedin.svg">
+						<a class="st-btn" data-network="twitter" href="https://www.twitter.com/" id="FooterSocialMediaLink">
+							<img class="FooterSocialMediaImageSize" alt="twitter sharing button" src="https://platform-cdn.sharethis.com/img/twitter.svg">
 						</a>
 
-						<a class="st-btn" data-network="instagram" id="FooterMediaLink">
-							<img class="MediaImageSize" alt="twitter sharing button" src="https://platform-cdn.sharethis.com/img/twitter.svg">
-						</a>
-
-						<a class="st-btn" data-network="instagram" id="FooterMediaLink">
-							<img class="MediaImageSize" alt="instagram sharing button" src="https://platform-cdn.sharethis.com/img/instagram.svg">
+						<a class="st-btn" data-network="instagram" href="https://www.instagram.com/" id="FooterSocialMediaLink">
+							<img class="FooterSocialMediaImageSize" alt="instagram sharing button" src="https://platform-cdn.sharethis.com/img/instagram.svg">
 						</a>
 					</div>
 
-					<div class="col-lg-3 col-md-3 col-sm-2" id="OurServicesContainerFooter">
+					<div class="col-lg-3 col-md-3 col-xs-3">
 						<h3 class="AboutUsHeader"> <b> Our Services </b> </h3>
 						<ul class="OurServicesContentContainer">
-							<li class="OurServiceFooterContent">Lorem ipsum Lorem ipsum</li>
-							<li class="OurServiceFooterContent">Lorem ipsum Lorem ipsum</li>
-							<li class="OurServiceFooterContent">Lorem ipsum Lorem ipsum</li>
-							<li class="OurServiceFooterContent">Lorem ipsum Lorem ipsum</li>
-						</ul>
-					</div>
-
-					<div class="col-lg-3 col-md-2 col-sm-1" id="ContactUsContainerFooter">
-						<h3 class="AboutUsHeader"> <b> Contact Us </b> </h3>
-						<ul class="Phone">
-							<li class="FooterContent">Mobile:</li>
-							<li class="FooterContentOne">+20 011234567890</li>
-
-							<li class="FooterContent">Telephone:</li>
-							<li class="FooterContentTwo">+20 23456789</li>
-
-							<li class="FooterContent">Email:</li>
-							<li class="FooterContentThree">Lorem ipsum@gmail.com</li>
-
-							<li class="FooterContent">Address:</li>
-							<li class="FooterContentFour">Lorem ipsum Lorem ipsum</li>
-						</ul>
-					</div>
-
-					<div class="col-lg-1 col-md-1 col-sm-1" id="UPSection">
-						<img class="UPImageSize" alt="googleplus sharing button" src="images/UP.png">
-					</div>
-				</div>
-
-				<div class="row">
-
-					<!-- <div class="col-lg-2 col-md-1" id="PictureOfAboutUs">
-				<img class="card-image" id="StyleOfAboutUsPicture" src="images/Logo.png" alt="alternative">
-				<div class="col-lg-2" id="PictureOfAboutUs">
-					<img class="card-image" id="StyleOfAboutUsPicture" src="images/Logo.png" alt="alternative">
-				</div>
-				<div class="footer-col last">
-					<div class="row">
-						<div class="col-lg-2" id="PictureOfAboutUs">
-							<img class="card-image" id="StyleOfAboutUsPicture" src="images/Logo.png" alt="alternative">
-						</div>
-					</div>
-				</div>
-			</div> -->
-					<!-- <div class="col-lg-3 col-md-1">
-				<div class="row">
-					<div class="col-lg-12">
-						<h3 class="AboutUsHeader"><b>About Us</b></h3>
-					</div>
-
-					<div class="col-lg-12" id="ContentFooterMarginBottom">
-						<ul class="ContentOfAboutUsSection">
-							<li class="FooterContent">
-								Lorem ipsum dolor sit amet, consectetuer
-								adipiscing elit, sed diam nonummy nibh
-								euismod tincidunt ut laoreet dolore magna
-								aliquam erat volutpat. Ut wisi enim ad minim
-								veniam, quis nostrud exerci tation ullam
+							<li class="OurServiceFooterContent">
+								<a class="OurServiceFooterHeader" href="Offshoredevelopment.html">Offshore development</a>
+								<!--Lorem ipsum Lorem ipsum-->
+							</li>
+							<li class="OurServiceFooterContent">
+								<a class="OurServiceFooterHeader" href="Outsourcing.html">Out sourcing</a>
+							</li>
+							<li class="OurServiceFooterContent">
+								<a class="OurServiceFooterHeader" href="QualityAssurance&Testing.html">Quality Assurance</a>
+							</li>
+							<li class="OurServiceFooterContent">
+								<a class="OurServiceFooterHeader" href="SoftwareSolutions.html">Software Solutions</a>
+							</li>
+							<li class="OurServiceFooterContent">
+								<a class="OurServiceFooterHeader" href="TurnkeySolutions.html">Turnkey Solutions</a>
+							</li>
+							<li class="OurServiceFooterContent">
+								<a class="OurServiceFooterHeader" href="WebSolutions.html">Web Solutions</a>
 							</li>
 						</ul>
 					</div>
 
-					<div class="col-lg-12">
-						<div class="mb-5 flex-center">
-							<a class="st-btn" data-network="googleplus" id="FooterMediaLink">
-								<img class="MediaImageSize" alt="googleplus sharing button" src="https://platform-cdn.sharethis.com/img/googleplus.svg">
-							</a>
+					<div class="col-lg-3 col-md-3 col-xs-3">
+						<h3 class="AboutUsHeader"> <b> Contact Us </b> </h3>
+						<ul class="Phone">
+							<li class="FooterContent">Mobile:</li>
+							<li class="FooterContentOne">+201001612287</li>
+							<li class="FooterContentOne">+201099300816</li>
 
-							<a class="st-btn st-first" data-network="facebook" id="FooterMediaLink">
-								<img class="MediaImageSize" alt="facebook sharing button" src="https://platform-cdn.sharethis.com/img/facebook.svg">
-							</a>
+							<li class="FooterContent">Telephone:</li>
+							<li class="FooterContentTwo">+2 025648201</li>
 
-							<a class="st-btn" data-network="linkedin" id="FooterMediaLink">
-								<img class="MediaImageSize" alt="linkedin sharing button" src="https://platform-cdn.sharethis.com/img/linkedin.svg">
-							</a>
+							<li class="FooterContent">Email:</li>
+							<li class="FooterContentThree">Info@arabdt.com</li>
 
-							<a class="st-btn" data-network="instagram" id="FooterMediaLink">
-								<img class="MediaImageSize" alt="twitter sharing button" src="https://platform-cdn.sharethis.com/img/twitter.svg">
-							</a>
+							<li class="FooterContent">Address:</li>
+							<li class="FooterContentFour">5th District, New Cairo, Cairo,Egypt</li>
+						</ul>
+					</div>
 
-							<a class="st-btn" data-network="instagram" id="FooterMediaLink">
-								<img class="MediaImageSize" alt="instagram sharing button" src="https://platform-cdn.sharethis.com/img/instagram.svg">
-							</a>
-						</div>
+					<div class="col-lg-12 col-md-12 col-xs-12">
+						<p class="copyright-text"> ArabDT Copyrights © 2020 </p>
 					</div>
 				</div>
-			</div> -->
-					<!-- <div class="col-lg-3">
-				<div class="footer-col last">
-					<div class="row">
-						<div class="col-lg-10">
-							<h3 class="AboutUsHeader">Our Services</h3>
-							<ul class="Phone">
-								<li class="FooterContent">Lorem ipsum Lorem ipsum</li>
-								<li class="FooterContent">Lorem ipsum Lorem ipsum</li>
-								<li class="FooterContent">Lorem ipsum Lorem ipsum</li>
-								<li class="FooterContent">Lorem ipsum Lorem ipsum</li>
-							</ul>
-						</div>
 
+				<div class="row" id="SecondFooter">
+					<div class="col-md-6 col-xs-12">
+						<img class="img-fluid" id="LogoPicture" src="images/Logo.png" alt="alternative">
+					</div>
+
+					<div class="col-md-6 col-xs-12" id="SectionContactUs">
+						<h3 class="FooterHeaderAboutUs"> <b> Contact Us </b> </h3>
+						<ul class="FooterPhone">
+							<li class="FooterContentBody">Mobile:</li>
+							<li class="FooterContentOneSection">+201001612287</li>
+							<li class="FooterContentOneSection">+201099300816</li>
+
+							<li class="FooterContentBody">Telephone:</li>
+							<li class="FooterContentTwoSection">+2 025648201</li>
+
+							<li class="FooterContentBody">Email:</li>
+							<li class="FooterContentThreeSection">Info@arabdt.com</li>
+
+							<li class="FooterContentBody">Address:</li>
+							<li class="FooterContentFourSection">5th District, New Cairo, Cairo,Egypt</li>
+						</ul>
+					</div>
+
+					<div class="col-md-6 col-xs-12" id="MediaSocial">
+						<a class="st-btn" data-network="linkedin" href="https://www.linkedin.com/" id="FooterSocialMediaLink">
+							<img class="FooterSocialMediaImageSize" alt="linkedin sharing button" src="https://platform-cdn.sharethis.com/img/linkedin.svg">
+						</a>
+
+						<a class="st-btn st-first" data-network="facebook" href="https://www.facebook.com/" id="FooterSocialMediaLink">
+							<img class="FooterSocialMediaImageSize" alt="facebook sharing button" src="https://platform-cdn.sharethis.com/img/facebook.svg">
+						</a>
+
+						<a class="st-btn" data-network="twitter" href="https://www.twitter.com/" id="FooterSocialMediaLink">
+							<img class="FooterSocialMediaImageSize" alt="twitter sharing button" src="https://platform-cdn.sharethis.com/img/twitter.svg">
+						</a>
+
+						<a class="st-btn" data-network="instagram" href="https://www.instagram.com/" id="FooterSocialMediaLink">
+							<img class="FooterSocialMediaImageSize" alt="instagram sharing button" src="https://platform-cdn.sharethis.com/img/instagram.svg">
+						</a>
+					</div>
+
+					<p class="copyright_text" id="CopyRight"> ArabDT Copyrights © 2020 </p>
+				</div>
+
+				<div class="container" id="ButtonFooterUp">
+					<div class="UpFooter" id="UPSection">
+						<a href="#top" id="button">
+						</a>
+
+						<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+						<script>
+							var btn = $('#button');
+
+							$(window).scroll(function () {
+								if ($(window).scrollTop() > 300) {
+									btn.addClass('show');
+								} else {
+									btn.removeClass('show');
+								}
+							});
+
+							btn.on('click', function (e) {
+								e.preventDefault();
+								$('html, body').animate({ scrollTop: 0 }, '300');
+							});
+						</script>
 					</div>
 				</div>
-			</div> -->
-					<!-- <div class="col-lg-3">
-				<div class="footer-col last">
-					<div class="row">
-						<div class="col-lg-10">
-							<h3 class="AboutUsHeader">Contact Us</h3>
-							<ul class="Phone">
-								<li class="FooterContent">Mobile:</li>
-								<li class="FooterContent">+20 011234567890</li>
-
-								<li class="FooterContent">Telephone:</li>
-								<li class="FooterContent">+20 23456789</li>
-
-								<li class="FooterContent">Email:</li>
-								<li class="FooterContent">Lorem ipsum@gmail.com</li>
-
-								<li class="FooterContent">Address:</li>
-								<li class="FooterContent">Lorem ipsum Lorem ipsum</li>
-							</ul>
-						</div>
-
-					</div>
-				</div>
-			</div> -->
-					<!-- <div class="col-lg-1" id="UPSection">
-				<a class="st-btn" data-network="googleplus" href="#top">
-					<img class="UPImageSize" alt="googleplus sharing button" src="images/UP.png">
-				</a>
-			</div> -->
-				</div>
-
-				<p class="copyright-text">ArabDT Copyright 2020 </p>
 			</div>
-		</div> <!-- Footer -->
+		</div>
 
 		<!-- Scripts -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/noisy/1.2/jquery.noisy.min.js"></script>
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/jquery-migrate-1.2.1.min.js"></script>
 		<script src="js/min/plugins.min.js"></script>
 		<script src="js/min/medigo-custom.min.js"></script>
 	</body>
